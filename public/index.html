@@ -35,16 +35,13 @@
         <button class="tab-btn gold-tab" data-target="view-bloom">
           <span>BloomPress</span>
         </button>
-        <button class="tab-btn" data-target="view-cpa">
-          <span>CPA Audit</span>
-        </button>
       </nav>
 
       <!-- Nav Actions & Mobile Toggle -->
       <div class="nav-actions">
-        <button class="btn-cpa-audit" id="btn-nav-cpa" title="Open CPA Validation Schedule">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          <span class="cpa-btn-text">CPA Audit</span>
+        <button class="btn-secondary" onclick="exportFinancialCSV()" title="Export Consolidated Financial CSV" style="font-size: 0.82rem; padding: 0.45rem 0.85rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Export CSV</span>
         </button>
         <button class="btn-mobile-toggle" id="btn-mobile-menu" aria-label="Toggle mobile menu" aria-expanded="false">
           <span class="hamburger-bar"></span>
@@ -61,7 +58,6 @@
         <button class="tab-btn" data-target="view-fmai">FM AI</button>
         <button class="tab-btn" data-target="view-neogen">NeoGen</button>
         <button class="tab-btn gold-tab" data-target="view-bloom">BloomPress</button>
-        <button class="tab-btn" data-target="view-cpa">CPA Audit</button>
       </div>
     </div>
 
@@ -98,23 +94,12 @@
               <small>5 Verified Packages, 100% Royalties & Profit Margins</small>
             </div>
           </button>
-          <button class="drawer-nav-item" data-target="view-cpa">
-            <div class="drawer-icon" style="background:#F1F5F9; color:#0F172A;">⚖️</div>
-            <div class="drawer-text">
-              <strong>CPA Audit & Governance</strong>
-              <small>ASC 606 Schedules, Capital Controls & Scaling Frameworks</small>
-            </div>
-          </button>
         </div>
 
         <div class="drawer-actions">
-          <button class="btn-secondary" style="width:100%; justify-content:center;" onclick="exportFinancialCSV(); closeMobileDrawer();">
+          <button class="btn-primary" style="width:100%; justify-content:center;" onclick="exportFinancialCSV(); closeMobileDrawer();">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span>Download CSV Model</span>
-          </button>
-          <button class="btn-cpa-audit" style="width:100%; justify-content:center;" onclick="window.print(); closeMobileDrawer();">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-            <span>Print CPA Dossier</span>
+            <span>Download Financial Model (CSV)</span>
           </button>
         </div>
       </div>
@@ -141,8 +126,8 @@
         <span class="ticker-value">$0.70 – $1.20</span>
       </div>
       <div class="ticker-metric">
-        <span class="ticker-label">CPA AUDIT GOVERNANCE:</span>
-        <span class="ticker-badge">ASC 606 COMPLIANT</span>
+        <span class="ticker-label">ACCOUNTING STANDARD:</span>
+        <span class="ticker-badge">GAAP / ASC 606</span>
       </div>
     </div>
   </div>
@@ -161,8 +146,11 @@
           Strategically balancing high-velocity consumer recurring SaaS & wearable hardware (<strong>FitMind AI</strong>), cash-flow-positive enterprise AI automation retainers (<strong>NeoGen Technologies</strong>), and high-ticket archival literary publishing craftsmanship (<strong>BloomPress Publishers</strong>).
         </p>
         <div class="btn-group">
-          <button class="btn-cpa-audit" onclick="document.querySelector('[data-target=\'view-fmai\']').click()">Explore FM AI Gym Ecosystem →</button>
-          <button class="btn-secondary" onclick="document.querySelector('[data-target=\'view-cpa\']').click()">Review CPA Governance Schematics</button>
+          <button class="btn-primary" onclick="document.querySelector('[data-target=\'view-fmai\']').click()">Explore FM AI Gym Ecosystem →</button>
+          <button class="btn-secondary" onclick="exportFinancialCSV()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Export Consolidated Model (CSV)</span>
+          </button>
         </div>
       </div>
 
@@ -220,9 +208,9 @@
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               <span>Export CSV Model</span>
             </button>
-            <button class="btn-secondary" id="btn-print-audit">
+            <button class="btn-secondary" id="btn-print-audit" onclick="window.print()">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-              <span>Print CPA Dossier</span>
+              <span>Print Financial Schedule</span>
             </button>
           </div>
         </div>
@@ -839,15 +827,70 @@
         </div>
       </div>
 
-      <!-- Factual Revenue Projections (Monthly, Quarterly, Semi-Annually, Annually) -->
+      <!-- Auditable Month 12 Revenue Bridge & Driver Breakdown -->
       <div class="section-block">
         <div class="section-head">
           <div>
-            <span class="section-tag">Proposal Aligned Forecasts</span>
-            <h2 class="section-title">FM AI Growth & Profit Accumulation Schedule</h2>
-            <p class="section-sub">Factual projections mapping to Months 1, 3, 6, 9, and 12 reflecting Basic ($19.99), Pro ($29.99), Ultra ($99.99), and Enterprise ($299+) unit economics.</p>
+            <span class="section-tag">Auditable Financial Bridge</span>
+            <h2 class="section-title">Month 12 Revenue Bridge & Driver Breakdown ($518,000 / mo)</h2>
+            <p class="section-sub">Itemized subscriber volume, realized yields, and driver formulas separating contractual recurring ARR from variable ad & digital transaction streams.</p>
           </div>
-          <span class="tab-pill pill-blue">Proposal Validated</span>
+          <span class="tab-pill pill-blue">ASC 606 Itemized</span>
+        </div>
+
+        <!-- 3 Core Summary Cards -->
+        <div class="bridge-summary-grid">
+          <div class="bridge-sum-card" style="border-top: 3px solid #0052FF;">
+            <div class="bridge-sum-label">Contractual Recurring SaaS (ARR)</div>
+            <div class="bridge-sum-val mono" style="color: #0052FF;">$364,843 / mo</div>
+            <div class="bridge-sum-sub"><strong>$4,378,116 Annualized ARR</strong> (Basic, Pro, Ultra & Enterprise accounts)</div>
+          </div>
+          <div class="bridge-sum-card" style="border-top: 3px solid #10B981;">
+            <div class="bridge-sum-label">Variable Ads & Digital Products</div>
+            <div class="bridge-sum-val mono" style="color: #10B981;">$153,252 / mo</div>
+            <div class="bridge-sum-sub">AdMob impressions on 105K free users ($60.9K) + Trainer marketplace ($68.4K) + Passes</div>
+          </div>
+          <div class="bridge-sum-card" style="border-top: 3px solid #D97706;">
+            <div class="bridge-sum-label">Total Portfolio Monthly Gross</div>
+            <div class="bridge-sum-val mono" style="color: #D97706;">$518,095 / mo</div>
+            <div class="bridge-sum-sub"><strong>$6,217,140 Gross Run-Rate</strong> across 125,000 MAU (Blended ARPU: $4.14)</div>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="financial-table">
+            <thead>
+              <tr>
+                <th>Revenue Channel & Driver Formula</th>
+                <th>Revenue Category</th>
+                <th>Realized Price</th>
+                <th>Active Volume</th>
+                <th>Monthly Run-Rate</th>
+                <th>Annualized Value</th>
+              </tr>
+            </thead>
+            <tbody id="fmai-revenue-bridge-tbody">
+              <!-- Rendered via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Factual Revenue Projections (Dual Scenario: Optimistic vs Base-Case) -->
+      <div class="section-block">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">Scenario Modeling Engine</span>
+            <h2 class="section-title">FM AI Growth & Profit Accumulation Schedule</h2>
+            <p class="section-sub">Milestone horizons comparing the ambitious growth target against a risk-adjusted, institutional base-case planning scenario.</p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+            <div class="scenario-toggle-container">
+              <button class="scenario-toggle-btn active" id="btn-scenario-optimistic" onclick="switchFMAIScenario('optimistic')">Optimistic Growth ($6.2M Run-Rate)</button>
+              <button class="scenario-toggle-btn" id="btn-scenario-base" onclick="switchFMAIScenario('base')">Institutional Base-Case ($140K/mo M12)</button>
+            </div>
+            <span class="tab-pill pill-blue" id="scenario-active-badge">Optimistic Target ($6.2M Run-Rate)</span>
+          </div>
         </div>
 
         <div class="table-responsive">
@@ -857,16 +900,19 @@
                 <th>Milestone Period</th>
                 <th>MAU Target</th>
                 <th>Monthly Revenue</th>
-                <th>Operating Expenses</th>
-                <th>Net Profit</th>
-                <th>Net Margin</th>
-                <th>Underlying Model Assumptions</th>
+                <th>Operating Expenses (OPEX)</th>
+                <th>Operating Income (EBIT)</th>
+                <th>Operating Margin</th>
+                <th>Underlying Model Assumptions &amp; Drivers</th>
               </tr>
             </thead>
             <tbody id="fmai-projections-tbody">
               <!-- Rendered via JavaScript -->
             </tbody>
           </table>
+        </div>
+        <div class="financial-footnote">
+          * Note: Operating Income reflects GAAP / ASC 606 Operating Profit (EBIT). Excludes debt servicing interest, corporate income taxes, and non-operating capital items. CPI target is modeled at $1.10–$1.20 with a conservative 5% install-to-paid conversion yielding an implied paying customer acquisition cost (CAC) of $22.00–$24.00 recouped within Month 1.
         </div>
       </div>
     </section>
@@ -1050,135 +1096,7 @@
     </section>
 
 
-    <!-- ====================================================================
-         VIEW 5: CPA AUDIT, COMPLIANCE & GOVERNANCE DOSSIER
-         ==================================================================== -->
-    <section id="view-cpa" class="view-section">
-      <div class="hero-banner" style="border-top: 5px solid #0F172A;">
-        <span class="hero-tag">Formal CPA Review File</span>
-        <h1 class="hero-title">Certified Public Accountant (CPA) <span class="highlight-blue">Financial Audit Dossier</span></h1>
-        <p class="hero-desc">
-          Prepared for executive board members, lead auditors, and financial advisors. Complete GAAP / ASC 606 revenue recognition schedules, capitalization benchmarks, working capital governance, and institutional scalability frameworks.
-        </p>
-        <div class="btn-group">
-          <button class="btn-cpa-audit" onclick="window.print()">Print Formal CPA Dossier (PDF)</button>
-          <button class="btn-secondary" onclick="exportFinancialCSV()">Download Audit CSV Model</button>
-        </div>
-      </div>
 
-      <!-- CPA Key Governance Guidelines -->
-      <div class="section-block">
-        <div class="section-head">
-          <div>
-            <span class="section-tag">Audit Protocols</span>
-            <h2 class="section-title">4 Institutional Capital Allocation & Financial Controls</h2>
-            <p class="section-sub">Standardized accounting policies governing working capital liquidity, vendor economies of scale, and infrastructure cost discipline.</p>
-          </div>
-        </div>
-
-        <div class="kpi-grid">
-          <div class="kpi-card">
-            <div class="kpi-card-title">1. Strategic Capital Allocation</div>
-            <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.35rem; color: #0F172A;">Disciplined Working Capital & Liquidity</div>
-            <p style="font-size: 0.8rem; color: #64748B;">Initial MVP build and marketing rollout are fully financed with conservative cash-flow buffers, maintaining operational liquidity and non-dilutive balance sheet strength.</p>
-          </div>
-
-          <div class="kpi-card">
-            <div class="kpi-card-title">2. Vendor Economies of Scale</div>
-            <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.35rem; color: #0052FF;">Cash-on-Cash Return ≥ 35% IRR</div>
-            <p style="font-size: 0.8rem; color: #64748B;">Enterprise SaaS, security, and infrastructure commitments leverage volume prepayments to unlock 25%–35% annualized software margin advantages.</p>
-          </div>
-
-          <div class="kpi-card">
-            <div class="kpi-card-title">3. Multi-Tier Cloud Efficiency</div>
-            <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.35rem; color: #10B981;">Automated Multi-Cloud Tiering</div>
-            <p style="font-size: 0.8rem; color: #64748B;">Dynamic lifecycle storage rules and on-device CoreML / TensorFlow Lite processing keep compute expenses ultra-lean, sustaining 65%–73% net operating margins.</p>
-          </div>
-
-          <div class="kpi-card">
-            <div class="kpi-card-title">4. Milestone Growth Triggers</div>
-            <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.35rem; color: #0052FF;">Performance-Gated Scale Acceleration</div>
-            <p style="font-size: 0.8rem; color: #64748B;">Expansion tranches and operational scaling deploy systematically as user acquisition velocity, cohort retention (≥40% Day 30), and MRR targets are achieved.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Itemized Expense Management Schedule -->
-      <div class="section-block">
-        <div class="section-head">
-          <div>
-            <span class="section-tag">Expense Itemization</span>
-            <h2 class="section-title">Itemized Expense Growth by Horizon</h2>
-            <p class="section-sub">Granular cost expansion mapped against Monthly Active Users (MAU) and client volume.</p>
-          </div>
-        </div>
-
-        <div class="table-responsive">
-          <table class="financial-table">
-            <thead>
-              <tr>
-                <th>Expense Category</th>
-                <th>Month 1 (10K MAU)</th>
-                <th>Month 3 (45K MAU)</th>
-                <th>Month 6 (50K MAU)</th>
-                <th>Month 12 (135K MAU)</th>
-                <th>CPA Elasticity Note</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Cloud Infra (Firebase, GCP, AWS S3/CloudFront)</strong></td>
-                <td class="mono">$200</td>
-                <td class="mono">$1,800</td>
-                <td class="mono">$3,000</td>
-                <td class="mono font-bold" style="color: #DC2626;">$10,500</td>
-                <td style="font-size: 0.78rem; color: #64748B;">Kubernetes migration triggered only if MAU &gt; 100K &amp; spend &gt; $10k/mo.</td>
-              </tr>
-              <tr>
-                <td><strong>Paid Acquisition & Marketing (Meta, TikTok, Google)</strong></td>
-                <td class="mono">$11,000</td>
-                <td class="mono">$18,000</td>
-                <td class="mono">$28,000</td>
-                <td class="mono font-bold">$38,000</td>
-                <td style="font-size: 0.78rem; color: #64748B;">Strictly governed by blended CAC &le; $1.20 and soft cap $1.50.</td>
-              </tr>
-              <tr>
-                <td><strong>AI Inference & LLM API Token Costs</strong></td>
-                <td class="mono">$300</td>
-                <td class="mono">$1,200</td>
-                <td class="mono">$3,500</td>
-                <td class="mono font-bold">$8,200</td>
-                <td style="font-size: 0.78rem; color: #64748B;">On-device CoreML / TensorFlow Lite keeps cloud inference low.</td>
-              </tr>
-              <tr>
-                <td><strong>Payment Gateway & App Store Processing Fees</strong></td>
-                <td class="mono">$1,200</td>
-                <td class="mono">$6,500</td>
-                <td class="mono">$17,500</td>
-                <td class="mono font-bold">$43,800</td>
-                <td style="font-size: 0.78rem; color: #64748B;">15% App Store Small Business Program + Stripe 2.9% + 30¢.</td>
-              </tr>
-              <tr>
-                <td><strong>HIPAA, GDPR, CCPA & Security Telemetry</strong></td>
-                <td class="mono">$500</td>
-                <td class="mono">$1,500</td>
-                <td class="mono">$2,500</td>
-                <td class="mono font-bold">$3,000</td>
-                <td style="font-size: 0.78rem; color: #64748B;">Continuous automated SOC2 / HIPAA compliance audits.</td>
-              </tr>
-              <tr style="background: #EFF6FF; font-weight: 700;">
-                <td><strong>Total Monthly Operating Expenses</strong></td>
-                <td class="mono">$13,200</td>
-                <td class="mono">$29,000</td>
-                <td class="mono">$54,500</td>
-                <td class="mono" style="color: #0F172A;">$103,500</td>
-                <td style="font-size: 0.78rem; color: var(--blue-primary);">Fully covered by recurring revenue from Month 3 onward.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
 
   </main>
 

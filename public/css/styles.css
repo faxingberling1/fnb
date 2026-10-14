@@ -1125,6 +1125,111 @@ code, .font-mono {
   border: 1px solid #FDE68A;
 }
 
+/* Scenario Toggle & Financial Bridge Styles */
+.scenario-toggle-container {
+  display: inline-flex;
+  align-items: center;
+  background: #F1F5F9;
+  padding: 0.3rem;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+  gap: 0.35rem;
+}
+
+.scenario-toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748B;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.scenario-toggle-btn:hover {
+  color: #0F172A;
+}
+
+.scenario-toggle-btn.active {
+  background: #FFFFFF;
+  color: #0052FF;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.bridge-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.bridge-sum-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bridge-sum-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748B;
+}
+
+.bridge-sum-val {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.bridge-sum-sub {
+  font-size: 0.75rem;
+  color: #64748B;
+}
+
+.bridge-cat-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.cat-arr {
+  background: #EFF6FF;
+  color: #1D4ED8;
+  border: 1px solid #BFDBFE;
+}
+
+.cat-variable {
+  background: #F8FAFC;
+  color: #475569;
+  border: 1px solid #E2E8F0;
+}
+
+.financial-footnote {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: #64748B;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.pill-amber {
+  background: #FEF3C7;
+  color: #B45309;
+  border: 1px solid #FDE68A;
+}
+
 /* ==========================================================================
    TABLES & FINANCIAL AUDIT SCHEDULES
    ========================================================================== */

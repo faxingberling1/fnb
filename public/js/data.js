@@ -10,7 +10,7 @@ const VENTURE_DATA = {
   fmai: {
     name: "FitMind AI (FM AI)",
     tagline: "AI-Powered Gym, Nutrition & Wearable Ecosystem",
-    description: "Holistic mind-body fitness and nutrition application featuring automated AI journeys, real-time biometrics, wearable synchronization, coach marketplace, and CPA-governed unit economics.",
+    description: "Holistic mind-body fitness and nutrition application featuring automated AI journeys, real-time biometrics, wearable synchronization, coach marketplace, and institutional unit economics.",
     currency: "USD",
     palette: {
       primary: "#0052FF",
@@ -273,14 +273,14 @@ const VENTURE_DATA = {
       growthAcceleration: "Milestone-based capital deployment unlocks expansion tranches as Day-30 retention (>=40%) and MRR velocity meet target performance benchmarks.",
       marginOptimization: "Dynamic multi-cloud tiering and on-device CoreML / TensorFlow Lite processing ensure structural 65%+ gross operating margins across scale."
     },
-    // Factual Financial Projections - Realistic, Fact-Checked & Calibrated for New Tiers
-    projections: [
+    // Factual Financial Projections - Dual Scenario Modeling (Optimistic vs Base-Case)
+    projectionsOptimistic: [
       {
         period: "Month 1 (Launch)",
         mau: "10,000",
         revenue: 24500,
-        expenses: 16800, // Initial UA experiment ($11,000 @ $1.10 CAC) + cloud infra + Stripe/app store fees
-        netProfit: 7700,
+        expenses: 16800,
+        operatingProfit: 7700,
         margin: "31.4%",
         note: "Early paid conversion to Basic ($19.99), Pro ($29.99), Ultra ($99.99), and AdMob. Cash-flow positive from launch."
       },
@@ -288,8 +288,8 @@ const VENTURE_DATA = {
         period: "Month 3 (Quarter 1)",
         mau: "35,000",
         revenue: 118500,
-        expenses: 44200, // Scale UA ($22K) + Cloud compute ($2.5K) + AI token inference + payment processing
-        netProfit: 74300,
+        expenses: 44200,
+        operatingProfit: 74300,
         margin: "62.7%",
         note: "Cohort rebilling active. Tier mix: Basic 45%, Pro 42%, Ultra 9%, Enterprise 5 accounts. Blended ARPU $3.38."
       },
@@ -297,8 +297,8 @@ const VENTURE_DATA = {
         period: "Month 6 (Semi-Annual)",
         mau: "50,000",
         revenue: 196800,
-        expenses: 72400, // UA ($32K) + Infra ($4.2K) + Trainer splits + App store fees (15%)
-        netProfit: 124400,
+        expenses: 72400,
+        operatingProfit: 124400,
         margin: "63.2%",
         note: "Benchmarked against Whoop & Ladder. Subscriptions ($146.9K) + AdMob ($23.8K) + Ad-Free ($7.2K) + B2B Enterprise ($6.2K) + Marketplace."
       },
@@ -306,8 +306,8 @@ const VENTURE_DATA = {
         period: "Month 9 (Quarter 3)",
         mau: "85,000",
         revenue: 342000,
-        expenses: 108500, // UA ($45K) + Infra ($6.5K) + AI token GPU scale + 22 Enterprise Gym accounts
-        netProfit: 233500,
+        expenses: 108500,
+        operatingProfit: 233500,
         margin: "68.3%",
         note: "Accelerated word-of-mouth (K-factor 1.25). Enterprise gym white-label scaling + high-margin trainer marketplace expansion."
       },
@@ -315,10 +315,130 @@ const VENTURE_DATA = {
         period: "Month 12 (Year 1)",
         mau: "125,000",
         revenue: 518000,
-        expenses: 139000, // UA ($55K) + Cloud & AI tokens ($18K) + Payment fees + Customer operations
-        netProfit: 379000,
+        expenses: 139000,
+        operatingProfit: 379000,
         margin: "73.2%",
-        note: "Mature ecosystem ($6.2M ARR run-rate). 11,500+ active paid subscribers across tiers + 45 Enterprise accounts. High operating leverage."
+        note: "Optimistic Growth Scenario ($6.2M Run-Rate). 11,500+ active paid subscribers across tiers + 45 Enterprise gym accounts."
+      }
+    ],
+
+    projectionsBaseCase: [
+      {
+        period: "Month 1 (Launch)",
+        mau: "3,000",
+        revenue: 3000,
+        expenses: 4800,
+        operatingProfit: -1800,
+        margin: "-60.0%",
+        note: "Measured launch testing CPI ($1.15) and app store conversion with initial ~100 paid test users."
+      },
+      {
+        period: "Month 3 (Quarter 1)",
+        mau: "10,000",
+        revenue: 12000,
+        expenses: 9500,
+        operatingProfit: 2500,
+        margin: "20.8%",
+        note: "Operational breakeven reached. 420 active paying subscribers + AdMob impressions. Lean cloud costs."
+      },
+      {
+        period: "Month 6 (Semi-Annual)",
+        mau: "25,000",
+        revenue: 35000,
+        expenses: 21200,
+        operatingProfit: 13800,
+        margin: "39.4%",
+        note: "Steady retention validation. 1,150 paid subscribers + first 5 Enterprise gym pilot accounts."
+      },
+      {
+        period: "Month 9 (Quarter 3)",
+        mau: "45,000",
+        revenue: 75000,
+        expenses: 38500,
+        operatingProfit: 36500,
+        margin: "48.7%",
+        note: "Predictable acquisition funnel ($22 paid CAC). 2,400 paid subscribers + 12 Enterprise gym partners."
+      },
+      {
+        period: "Month 12 (Year 1)",
+        mau: "70,000",
+        revenue: 140000,
+        expenses: 58200,
+        operatingProfit: 81800,
+        margin: "58.4%",
+        note: "Institutional Base Case ($1.68M Run-Rate). 4,600+ paid subscribers + 20 Enterprise gyms. 58.4% Operating Margin."
+      }
+    ],
+
+    // Default alias for backwards-compatibility
+    get projections() {
+      return this.projectionsOptimistic;
+    },
+
+    // Auditable Month 12 Revenue Bridge: Exact Driver Formulas & Subscriber Counts
+    month12RevenueBridge: [
+      {
+        stream: "Basic Subscriptions ($19.99)",
+        price: "$19.99 / mo",
+        volume: "5,250 Active Subscribers",
+        monthlyRevenue: 104947,
+        category: "Recurring SaaS ARR",
+        driverFormula: "5,250 subscribers × $19.99/mo (entry paid cohort tracking progressive overload)",
+        isRecurringARR: true
+      },
+      {
+        stream: "Pro Flagship Subscriptions ($29.99)",
+        price: "$29.99 / mo",
+        volume: "4,900 Active Subscribers",
+        monthlyRevenue: 146951,
+        category: "Recurring SaaS ARR",
+        driverFormula: "4,900 subscribers × $29.99/mo (flagship AI adaptive training & in-ear coaching)",
+        isRecurringARR: true
+      },
+      {
+        stream: "Ultra VIP Subscriptions ($99.99)",
+        price: "$99.99 / mo",
+        volume: "950 Active Subscribers",
+        monthlyRevenue: 94990,
+        category: "High-Ticket Recurring",
+        driverFormula: "950 subscribers × $99.99/mo (monthly 1v1 coach reviews & bio-fatigue modeling)",
+        isRecurringARR: true
+      },
+      {
+        stream: "Enterprise B2B Gym Accounts",
+        price: "$399 / mo avg",
+        volume: "45 Facility Accounts",
+        monthlyRevenue: 17955,
+        category: "B2B Contractual ARR",
+        driverFormula: "45 physical facilities × $399/mo ($299 base + $100 extra member license packages)",
+        isRecurringARR: true
+      },
+      {
+        stream: "Trainer SaaS & Marketplace Split",
+        price: "$89/mo avg + 15% split",
+        volume: "180 Active Personal Trainers",
+        monthlyRevenue: 68400,
+        category: "B2B2C Marketplace",
+        driverFormula: "180 trainers × $89/mo base SaaS ($16.0K) + $52.4K marketplace commission on client programs",
+        isRecurringARR: true
+      },
+      {
+        stream: "AdMob Advertising (Free Cohort)",
+        price: "$0.58 / active user / mo",
+        volume: "~105,000 Free Active MAU",
+        monthlyRevenue: 60900,
+        category: "Ad Monetization",
+        driverFormula: "105,000 free MAU × 40 monthly rewarded & interstitial ad impressions @ $14.50 eCPM",
+        isRecurringARR: false
+      },
+      {
+        stream: "Ad-Free Passes & Specialized Packs",
+        price: "$4.99 blended AOV",
+        volume: "4,800 Monthly Transactions",
+        monthlyRevenue: 23952,
+        category: "Digital Purchases",
+        driverFormula: "3,100 ad-free pass upgrades ($15.5K) + 1,700 specialized 90-day blueprint add-ons ($8.5K)",
+        isRecurringARR: false
       }
     ],
     // Expense Management Itemization

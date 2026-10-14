@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderFMAIEconomics();
   renderWatchSchematics();
   renderFMAICaseStudies();
+  renderFMAIRevenueBridge();
   renderFMAIProjections();
   renderNeoGenServices();
   renderNeoGenProjections();
@@ -96,13 +97,6 @@ function initNavigation() {
     });
   }
 
-  // CPA Audit shortcut button in navbar
-  const cpaBtn = document.getElementById("btn-nav-cpa");
-  if (cpaBtn) {
-    cpaBtn.addEventListener("click", () => {
-      switchTab("view-cpa");
-    });
-  }
 
   // Brand logo click returns to overview
   const brandLogo = document.getElementById("brand-logo-trigger");
@@ -398,24 +392,87 @@ function renderFMAICaseStudies() {
   `).join("");
 }
 
-// 4. Render FM AI Financial Projections
-function renderFMAIProjections() {
-  const tbody = document.getElementById("fmai-projections-tbody");
+// 3c. Render FM AI Auditable Month 12 Revenue Bridge
+function renderFMAIRevenueBridge() {
+  const tbody = document.getElementById("fmai-revenue-bridge-tbody");
   if (!tbody || !window.VENTURE_DATA) return;
 
-  const proj = window.VENTURE_DATA.fmai.projections;
-  tbody.innerHTML = proj.map(p => `
+  const bridge = window.VENTURE_DATA.fmai.month12RevenueBridge;
+  if (!bridge) return;
+
+  tbody.innerHTML = bridge.map(b => `
     <tr>
-      <td><strong>${p.period}</strong></td>
-      <td class="mono">${p.mau}</td>
-      <td class="mono font-bold">$${p.revenue.toLocaleString()}</td>
-      <td class="mono" style="color: #DC2626;">$${p.expenses.toLocaleString()}</td>
-      <td class="mono highlight-cell">$${p.netProfit.toLocaleString()}</td>
-      <td class="mono text-positive"><strong>${p.margin}</strong></td>
-      <td style="font-size: 0.78rem; color: #64748B;">${p.note}</td>
+      <td>
+        <strong>${b.stream}</strong>
+        <div style="font-size: 0.74rem; color: #64748B; margin-top: 0.15rem;">${b.driverFormula}</div>
+      </td>
+      <td>
+        <span class="bridge-cat-badge ${b.isRecurringARR ? 'cat-arr' : 'cat-variable'}">
+          ${b.category}
+        </span>
+      </td>
+      <td class="mono font-bold">${b.price}</td>
+      <td class="mono">${b.volume}</td>
+      <td class="mono font-bold highlight-cell">$${b.monthlyRevenue.toLocaleString()}</td>
+      <td class="mono text-muted">$${Math.round(b.monthlyRevenue * 12).toLocaleString()}</td>
     </tr>
   `).join("");
 }
+
+// 4. Render FM AI Financial Projections (Dual Scenario: Optimistic vs Base-Case)
+function renderFMAIProjections(scenario = 'optimistic') {
+  const tbody = document.getElementById("fmai-projections-tbody");
+  if (!tbody || !window.VENTURE_DATA) return;
+
+  const proj = scenario === 'base' 
+    ? (window.VENTURE_DATA.fmai.projectionsBaseCase || window.VENTURE_DATA.fmai.projections)
+    : (window.VENTURE_DATA.fmai.projectionsOptimistic || window.VENTURE_DATA.fmai.projections);
+
+  tbody.innerHTML = proj.map(p => {
+    const profit = p.operatingProfit !== undefined ? p.operatingProfit : p.netProfit;
+    const isNegative = profit < 0;
+    return `
+      <tr>
+        <td><strong>${p.period}</strong></td>
+        <td class="mono">${p.mau}</td>
+        <td class="mono font-bold">$${p.revenue.toLocaleString()}</td>
+        <td class="mono" style="color: #DC2626;">$${p.expenses.toLocaleString()}</td>
+        <td class="mono highlight-cell ${isNegative ? 'text-negative' : ''}" style="${isNegative ? 'color: #DC2626 !important;' : ''}">
+          ${isNegative ? '-$' + Math.abs(profit).toLocaleString() : '$' + profit.toLocaleString()}
+        </td>
+        <td class="mono ${isNegative ? 'text-negative' : 'text-positive'}" style="${isNegative ? 'color: #DC2626;' : ''}">
+          <strong>${p.margin}</strong>
+        </td>
+        <td style="font-size: 0.78rem; color: #64748B;">${p.note}</td>
+      </tr>
+    `;
+  }).join("");
+}
+
+// Global Scenario Switcher Handler
+window.switchFMAIScenario = function(type) {
+  const optBtn = document.getElementById("btn-scenario-optimistic");
+  const baseBtn = document.getElementById("btn-scenario-base");
+  const badge = document.getElementById("scenario-active-badge");
+
+  if (type === 'base') {
+    if (baseBtn) baseBtn.classList.add("active");
+    if (optBtn) optBtn.classList.remove("active");
+    if (badge) {
+      badge.textContent = "Institutional Base-Case ($140K/mo M12)";
+      badge.className = "tab-pill pill-amber";
+    }
+    renderFMAIProjections('base');
+  } else {
+    if (optBtn) optBtn.classList.add("active");
+    if (baseBtn) baseBtn.classList.remove("active");
+    if (badge) {
+      badge.textContent = "Optimistic Target ($6.2M Run-Rate)";
+      badge.className = "tab-pill pill-blue";
+    }
+    renderFMAIProjections('optimistic');
+  }
+};
 
 // 5. Render NeoGen Services & Paid Campaign Model
 function renderNeoGenServices() {
@@ -826,7 +883,7 @@ function exportFinancialCSV() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.setAttribute("href", url);
-  a.setAttribute("download", "CPA_Consolidated_Financial_Model.csv");
+  a.setAttribute("download", "Consolidated_Financial_Model.csv");
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
