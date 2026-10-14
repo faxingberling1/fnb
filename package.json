@@ -1,0 +1,20 @@
+{
+  "name": "business-ventures-portal",
+  "version": "1.0.0",
+  "description": "Executive Multi-Venture Business Portal: FM AI, NeoGen Technologies, and BloomPress Publishers with CPA Validation Engine",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "venture-capital",
+    "fmai",
+    "neogen",
+    "bloompress",
+    "cpa-validation",
+    "financial-modeling"
+  ],
+  "author": "Antigravity & Venture Advisory",
+  "license": "ISC"
+}

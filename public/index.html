@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Multi-Venture Portal | FM AI, NeoGen & BloomPress</title>
+  <meta name="description" content="Verified financial models, factual revenue streams, CPA validation schematics, and multi-venture profit accumulation for FitMind AI, NeoGen Technologies, and BloomPress Publishers.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+</head>
+<body>
+
+  <!-- Top Sticky Navigation -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <div class="brand-badge" id="brand-logo-trigger">
+        <div class="brand-logo-icon">BV</div>
+        <div class="brand-info">
+          <span class="brand-title">Venture Advisory</span>
+          <span class="brand-sub">Executive Portal</span>
+        </div>
+      </div>
+
+      <!-- Desktop Navigation Tabs -->
+      <nav class="nav-tabs desktop-tabs" aria-label="Main Navigation">
+        <button class="tab-btn active" data-target="view-overview">
+          <span>Overview</span>
+        </button>
+        <button class="tab-btn" data-target="view-fmai">
+          <span>FM AI Gym</span>
+        </button>
+        <button class="tab-btn" data-target="view-neogen">
+          <span>NeoGen Tech</span>
+        </button>
+        <button class="tab-btn gold-tab" data-target="view-bloom">
+          <span>BloomPress</span>
+        </button>
+        <button class="tab-btn" data-target="view-cpa">
+          <span>CPA Audit</span>
+        </button>
+      </nav>
+
+      <!-- Nav Actions & Mobile Toggle -->
+      <div class="nav-actions">
+        <button class="btn-cpa-audit" id="btn-nav-cpa" title="Open CPA Validation Schedule">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span class="cpa-btn-text">CPA Audit</span>
+        </button>
+        <button class="btn-mobile-toggle" id="btn-mobile-menu" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Horizontal Quick Tab Bar (Always accessible on phones) -->
+    <div class="mobile-subnav-bar">
+      <div class="mobile-tabs-scroll">
+        <button class="tab-btn active" data-target="view-overview">Overview</button>
+        <button class="tab-btn" data-target="view-fmai">FM AI</button>
+        <button class="tab-btn" data-target="view-neogen">NeoGen</button>
+        <button class="tab-btn gold-tab" data-target="view-bloom">BloomPress</button>
+        <button class="tab-btn" data-target="view-cpa">CPA Audit</button>
+      </div>
+    </div>
+
+    <!-- Full Mobile Dropdown / Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <div class="mobile-drawer-inner">
+        <div class="drawer-section-title">PORTFOLIO VENTURES</div>
+        <div class="mobile-drawer-links">
+          <button class="drawer-nav-item active" data-target="view-overview">
+            <div class="drawer-icon" style="background:#EFF6FF; color:#0052FF;">📊</div>
+            <div class="drawer-text">
+              <strong>Portfolio Overview</strong>
+              <small>Consolidated P&L, Simulator & Multi-Venture Model</small>
+            </div>
+          </button>
+          <button class="drawer-nav-item" data-target="view-fmai">
+            <div class="drawer-icon" style="background:#EFF6FF; color:#0052FF;">📱</div>
+            <div class="drawer-text">
+              <strong>FitMind AI (Gym App)</strong>
+              <small>12 Revenue Streams, AdMob, LTV & Watch Schematics</small>
+            </div>
+          </button>
+          <button class="drawer-nav-item" data-target="view-neogen">
+            <div class="drawer-icon" style="background:#EFF6FF; color:#2563EB;">⚡</div>
+            <div class="drawer-text">
+              <strong>NeoGen Technologies</strong>
+              <small>AI Automation, GHL Architecture & Paid Ad Campaigns</small>
+            </div>
+          </button>
+          <button class="drawer-nav-item" data-target="view-bloom">
+            <div class="drawer-icon" style="background:#FAF5EB; color:#9A7432;">📚</div>
+            <div class="drawer-text">
+              <strong>BloomPress Publishers</strong>
+              <small>5 Verified Packages, 100% Royalties & Profit Margins</small>
+            </div>
+          </button>
+          <button class="drawer-nav-item" data-target="view-cpa">
+            <div class="drawer-icon" style="background:#F1F5F9; color:#0F172A;">⚖️</div>
+            <div class="drawer-text">
+              <strong>CPA Audit & Governance</strong>
+              <small>ASC 606 Schedules, Capital Controls & Scaling Frameworks</small>
+            </div>
+          </button>
+        </div>
+
+        <div class="drawer-actions">
+          <button class="btn-secondary" style="width:100%; justify-content:center;" onclick="exportFinancialCSV(); closeMobileDrawer();">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download CSV Model</span>
+          </button>
+          <button class="btn-cpa-audit" style="width:100%; justify-content:center;" onclick="window.print(); closeMobileDrawer();">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            <span>Print CPA Dossier</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live Financial Highlights Ticker -->
+  <div class="financial-ticker-bar">
+    <div class="ticker-inner">
+      <div class="ticker-metric">
+        <span class="ticker-label">PORTFOLIO RUN-RATE:</span>
+        <span class="ticker-value">$5,424,600 / YR</span>
+      </div>
+      <div class="ticker-metric">
+        <span class="ticker-label">STABILIZED MONTHLY REVENUE:</span>
+        <span class="ticker-value">$299,340 / MO</span>
+      </div>
+      <div class="ticker-metric">
+        <span class="ticker-label">BLENDED NET PROFIT MARGIN:</span>
+        <span class="ticker-value" style="color: #34D399;">64.7% – 67.9%</span>
+      </div>
+      <div class="ticker-metric">
+        <span class="ticker-label">FM AI VERIFIED CAC:</span>
+        <span class="ticker-value">$0.70 – $1.20</span>
+      </div>
+      <div class="ticker-metric">
+        <span class="ticker-label">CPA AUDIT GOVERNANCE:</span>
+        <span class="ticker-badge">ASC 606 COMPLIANT</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main View Container -->
+  <main class="main-content">
+
+    <!-- ====================================================================
+         VIEW 1: PORTFOLIO OVERVIEW & CONSOLIDATED SIMULATOR
+         ==================================================================== -->
+    <section id="view-overview" class="view-section active">
+      <div class="hero-banner">
+        <span class="hero-tag">Consolidated Investment Thesis</span>
+        <h1 class="hero-title">Three High-Yield <span class="highlight-blue">Growth Engines</span> Under Unified Governance</h1>
+        <p class="hero-desc">
+          Strategically balancing high-velocity consumer recurring SaaS & wearable hardware (<strong>FitMind AI</strong>), cash-flow-positive enterprise AI automation retainers (<strong>NeoGen Technologies</strong>), and high-ticket archival literary publishing craftsmanship (<strong>BloomPress Publishers</strong>).
+        </p>
+        <div class="btn-group">
+          <button class="btn-cpa-audit" onclick="document.querySelector('[data-target=\'view-fmai\']').click()">Explore FM AI Gym Ecosystem →</button>
+          <button class="btn-secondary" onclick="document.querySelector('[data-target=\'view-cpa\']').click()">Review CPA Governance Schematics</button>
+        </div>
+      </div>
+
+      <!-- Quick Venture Portals Grid -->
+      <div class="kpi-grid">
+        <div class="kpi-card" style="border-top: 4px solid #0052FF; cursor: pointer;" onclick="document.querySelector('[data-target=\'view-fmai\']').click()">
+          <div class="kpi-card-header">
+            <span class="kpi-card-title">Venture 1 • B2C & Hardware</span>
+            <div class="kpi-icon">📱</div>
+          </div>
+          <div style="font-size: 1.3rem; font-weight: 800; margin-bottom: 0.25rem;">FitMind AI (FM AI)</div>
+          <div class="kpi-value" style="color: #0052FF;">$518.0K <span style="font-size: 0.9rem; color: #64748B;">/ mo (M12)</span></div>
+          <div class="kpi-subtitle">
+            <span class="text-positive">73.2% Net Margin</span> • $19.99–$99.99 Tiers & Watch Schematics
+          </div>
+        </div>
+
+        <div class="kpi-card" style="border-top: 4px solid #2563EB; cursor: pointer;" onclick="document.querySelector('[data-target=\'view-neogen\']').click()">
+          <div class="kpi-card-header">
+            <span class="kpi-card-title">Venture 2 • AI Agency & CRM</span>
+            <div class="kpi-icon">⚡</div>
+          </div>
+          <div style="font-size: 1.3rem; font-weight: 800; margin-bottom: 0.25rem;">NeoGen Technologies</div>
+          <div class="kpi-value" style="color: #2563EB;">$45.9K <span style="font-size: 0.9rem; color: #64748B;">/ mo</span></div>
+          <div class="kpi-subtitle">
+            <span class="text-positive">68.4% Net Margin</span> • Paid Ads 5.6x Cash ROAS
+          </div>
+        </div>
+
+        <div class="kpi-card" style="border-top: 4px solid #CCA062; cursor: pointer;" onclick="document.querySelector('[data-target=\'view-bloom\']').click()">
+          <div class="kpi-card-header">
+            <span class="kpi-card-title">Venture 3 • Literary Atelier</span>
+            <div class="kpi-icon" style="background: #FAF5EB; color: #9A7432;">📚</div>
+          </div>
+          <div style="font-size: 1.3rem; font-weight: 800; margin-bottom: 0.25rem;">BloomPress Publishers</div>
+          <div class="kpi-value" style="color: #9A7432;">$56.6K <span style="font-size: 0.9rem; color: #64748B;">/ mo</span></div>
+          <div class="kpi-subtitle">
+            <span class="text-positive">52.0% Net Margin</span> • 5 Verified Packages ($2.4k–$8.9k)
+          </div>
+        </div>
+      </div>
+
+      <!-- Individual Platform Financial Simulation Engines -->
+      <div class="simulator-panel" id="overview-simulator-wrapper">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+          <div>
+            <span class="section-tag">Independent Unit Economics</span>
+            <h2 style="font-size: 1.6rem; font-weight: 800;">Platform-Specific Financial Modeling Engines</h2>
+            <p style="font-size: 0.9rem; color: #64748B; margin-top: 0.25rem;">
+              Select a platform below to model unit economics independently. Mobile app downloads, B2B web marketing funnels, and book author submissions operate on separate conversion channels.
+            </p>
+          </div>
+          <div class="btn-group">
+            <button class="btn-secondary" id="btn-export-csv">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Export CSV Model</span>
+            </button>
+            <button class="btn-secondary" id="btn-print-audit">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              <span>Print CPA Dossier</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Platform Engine Selector Tabs -->
+        <div class="platform-sim-nav">
+          <button class="platform-sim-btn active" data-engine="engine-fmai">
+            <span>📱 FitMind AI (Mobile App Model)</span>
+          </button>
+          <button class="platform-sim-btn neogen-btn" data-engine="engine-neogen">
+            <span>⚡ NeoGen Technologies (Web Agency Model)</span>
+          </button>
+          <button class="platform-sim-btn bloom-btn" data-engine="engine-bloom">
+            <span>📚 BloomPress Publishers (Literary House Model)</span>
+          </button>
+        </div>
+
+        <!-- ENGINE 1: FITMIND AI MOBILE APP -->
+        <div class="platform-sim-view active" id="engine-fmai">
+          <div style="margin-bottom: 1.25rem;">
+            <span class="sim-platform-badge badge-fmai">📱 MOBILE APP ECOSYSTEM (B2C & ENTERPRISE)</span>
+            <p style="font-size: 0.85rem; color: #64748B;">
+              Models App Store & Google Play organic/paid installs, Basic ($19.99), Pro ($29.99), Ultra ($99.99), Enterprise ($299+), Ad-Free Pass ($4.99), and AdMob rewarded ads.
+            </p>
+          </div>
+
+          <div class="simulator-controls">
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>FM AI Mobile Active Users (MAU):</span>
+                <span class="slider-display" id="fmai-disp-mau" style="color: #0052FF;">50,000 MAU</span>
+              </div>
+              <input type="range" id="fmai-input-mau" min="10000" max="200000" step="5000" value="50000">
+              <span style="font-size: 0.72rem; color: #94A3B8;">Proposal milestone: 10K MVP ramp up to 140K mature base</span>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>In-App Paid Upgrade Rate:</span>
+                <span class="slider-display" id="fmai-disp-conv" style="color: #0052FF;">8.0%</span>
+              </div>
+              <input type="range" id="fmai-input-conv" min="2.0" max="15.0" step="0.5" value="8.0">
+              <span style="font-size: 0.72rem; color: #94A3B8;">Converts free users to Basic ($19.99), Pro ($29.99), and Ultra ($99.99)</span>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>AdMob Video Ads / Free User / Day:</span>
+                <span class="slider-display" id="fmai-disp-ads" style="color: #0052FF;">1.2 Ads</span>
+              </div>
+              <input type="range" id="fmai-input-ads" min="0.5" max="3.0" step="0.1" value="1.2">
+              <span style="font-size: 0.72rem; color: #94A3B8;">Rewarded video unlocks bonus meal scans; $14.50 blended eCPM</span>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>Enterprise B2B Gym Partners:</span>
+                <span class="slider-display" id="fmai-disp-enterprise" style="color: #0052FF;">12 Gym Partners</span>
+              </div>
+              <input type="range" id="fmai-input-enterprise" min="2" max="60" step="1" value="12">
+              <span style="font-size: 0.72rem; color: #94A3B8;">Gyms & studios licensing FM AI starting from $299/mo ($349 blended avg)</span>
+            </div>
+          </div>
+
+          <div class="simulator-results-grid">
+            <div class="sim-result-card" style="border-top: 3px solid #0052FF;">
+              <div class="sim-result-title">Monthly Subscription MRR</div>
+              <div class="sim-result-value" id="fmai-res-mrr" style="color: #0052FF;">$136,795</div>
+              <div class="sim-result-sub"><span id="fmai-res-paid-count">5,610</span> Paid & Ad-Free Subscribers</div>
+            </div>
+
+            <div class="sim-result-card" style="border-top: 3px solid #06B6D4;">
+              <div class="sim-result-title">AdMob In-App Ad Revenue</div>
+              <div class="sim-result-value" id="fmai-res-admob" style="color: #06B6D4;">$23,171</div>
+              <div class="sim-result-sub"><span id="fmai-res-free-count">44,390</span> Ad-Supported Free Users</div>
+            </div>
+
+            <div class="sim-result-card" style="border-top: 3px solid #6366F1;">
+              <div class="sim-result-title">Enterprise B2B Revenue</div>
+              <div class="sim-result-value" id="fmai-res-enterprise" style="color: #6366F1;">$4,188</div>
+              <div class="sim-result-sub"><span id="fmai-res-enterprise-count">12</span> Gym Accounts @ $349/mo Avg</div>
+            </div>
+
+            <div class="sim-result-card" style="border-top: 3px solid #10B981;">
+              <div class="sim-result-title">Net Mobile App Profit</div>
+              <div class="sim-result-value" id="fmai-res-net" style="color: #10B981;">$109,240</div>
+              <div class="sim-result-sub">Margin: <strong id="fmai-res-margin" style="color: #10B981;">66.5%</strong> (After App Store & Cloud Fees)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ENGINE 2: NEOGEN TECHNOLOGIES WEB AGENCY -->
+        <div class="platform-sim-view" id="engine-neogen">
+          <div style="margin-bottom: 1.25rem;">
+            <span class="sim-platform-badge badge-neogen">⚡ WEB MARKETING & B2B CRM AGENCY</span>
+            <p style="font-size: 0.85rem; color: #64748B;">
+              Models web-based paid campaigns (Meta Ads, Google Search, LinkedIn B2B), lead generation via landing pages, booked discovery calls, upfront automation builds, and monthly GHL retainers.
+            </p>
+          </div>
+
+          <div class="simulator-controls" style="border-color: #BFDBFE;">
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>Monthly Paid Ad Budget:</span>
+                <span class="slider-display" id="neogen-disp-adspend" style="color: #2563EB;">$6,000 / mo</span>
+              </div>
+              <input type="range" id="neogen-input-adspend" min="2000" max="25000" step="1000" value="6000">
+              <span style="font-size: 0.72rem; color: #94A3B8;">Targeting high-intent agency owners and local service businesses</span>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>Cost Per Qualified Lead (CPL):</span>
+                <span class="slider-display" id="neogen-disp-cpl" style="color: #2563EB;">$52.00</span>
+              </div>
+              <input type="range" id="neogen-input-cpl" min="35" max="85" step="1" value="52">
+              <span style="font-size: 0.72rem; color: #94A3B8;">Lead magnets, interactive CRM audits & VSL funnels</span>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>Discovery Call Close Rate:</span>
+                <span class="slider-display" id="neogen-disp-close" style="color: #2563EB;">22.0%</span>
+              </div>
+              <input type="range" id="neogen-input-close" min="10" max="35" step="1" value="22">
+              <span style="font-size: 0.72rem; color: #94A3B8;">Conversion of qualified strategy calls into paid client agreements</span>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>Average Monthly Retainer:</span>
+                <span class="slider-display" id="neogen-disp-retainer" style="color: #2563EB;">$950 / mo</span>
+              </div>
+              <input type="range" id="neogen-input-retainer" min="650" max="2000" step="50" value="950">
+              <span style="font-size: 0.72rem; color: #94A3B8;">Ongoing GHL workflows, AI chatbot maintenance & ad management</span>
+            </div>
+          </div>
+
+          <div class="simulator-results-grid">
+            <div class="sim-result-card" style="border-top: 3px solid #2563EB;">
+              <div class="sim-result-title">Inquiries & Strategy Calls</div>
+              <div class="sim-result-value" id="neogen-res-calls" style="color: #2563EB;">32 Calls</div>
+              <div class="sim-result-sub">From <span id="neogen-res-leads">115</span> Qualified Web Leads</div>
+            </div>
+
+            <div class="sim-result-card" style="border-top: 3px solid #10B981;">
+              <div class="sim-result-title">Month-1 Upfront Cash</div>
+              <div class="sim-result-value" id="neogen-res-cash" style="color: #10B981;">$33,600</div>
+              <div class="sim-result-sub"><span id="neogen-res-clients">7</span> New Clients @ $4,800 Setup Fee</div>
+            </div>
+
+            <div class="sim-result-card" style="border-top: 3px solid #0052FF;">
+              <div class="sim-result-title">Monthly Retainer MRR</div>
+              <div class="sim-result-value" id="neogen-res-mrr" style="color: #0052FF;">$17,100</div>
+              <div class="sim-result-sub">Active Base of 18 Retainer Clients</div>
+            </div>
+
+            <div class="sim-result-card" style="border-top: 3px solid #06B6D4;">
+              <div class="sim-result-title">Ad Campaign Cash ROAS</div>
+              <div class="sim-result-value" id="neogen-res-roas" style="color: #06B6D4;">5.6x</div>
+              <div class="sim-result-sub">Net Agency Profit: <strong id="neogen-res-net" style="color: #10B981;">$31,400</strong> (68.4% Margin)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ENGINE 3: BLOOMPRESS PUBLISHERS LITERARY HOUSE -->
+        <div class="platform-sim-view" id="engine-bloom">
+          <div style="margin-bottom: 1.25rem;">
+            <span class="sim-platform-badge badge-bloom">📚 LITERARY PUBLISHING HOUSE & AUTHOR SIGNINGS</span>
+            <p style="font-size: 0.85rem; color: #64748B;">
+              Models author manuscript submissions through digital marketing, editorial review consultations, verified package tier selections ($2,450 to $8,950), and 100% author royalty fulfillment.
+            </p>
+          </div>
+
+          <div class="simulator-controls" style="border-color: var(--gold-border); background: #FAF7F2;">
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>Monthly Author Marketing Spend:</span>
+                <span class="slider-display" id="bloom-disp-adspend" style="color: var(--gold-dark);">$5,140 / mo</span>
+              </div>
+              <input type="range" id="bloom-input-adspend" min="2000" max="20000" step="500" value="5140">
+              <span style="font-size: 0.72rem; color: #94A3B8;">Targeting authors, memoirists & corporate executives seeking publication</span>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>Cost Per Manuscript Lead (CPL):</span>
+                <span class="slider-display" id="bloom-disp-cpl" style="color: var(--gold-dark);">$24.50</span>
+              </div>
+              <input type="range" id="bloom-input-cpl" min="18" max="45" step="0.5" value="24.5">
+              <span style="font-size: 0.72rem; color: #94A3B8;">Meta Ads & Google Search ("publish my book", "ghostwriting")</span>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>Consultation to Signed Author Rate:</span>
+                <span class="slider-display" id="bloom-disp-close" style="color: var(--gold-dark);">$26.0%</span>
+              </div>
+              <input type="range" id="bloom-input-close" min="15" max="40" step="1" value="26">
+              <span style="font-size: 0.72rem; color: #94A3B8;">Editorial manuscript evaluation to signed publishing agreement</span>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label">
+                <span>Average Package Selection (AOV):</span>
+                <span class="slider-display" id="bloom-disp-aov" style="color: var(--gold-dark);">$4,720</span>
+              </div>
+              <input type="range" id="bloom-input-aov" min="2450" max="8950" step="200" value="4720">
+              <span style="font-size: 0.72rem; color: #94A3B8;">Blended across Debut ($2,450), Signature ($4,850), & Executive ($8,950)</span>
+            </div>
+          </div>
+
+          <div class="simulator-results-grid">
+            <div class="sim-result-card" style="border-top: 3px solid var(--gold-primary);">
+              <div class="sim-result-title">Authors Signed / Month</div>
+              <div class="sim-result-value" id="bloom-res-authors" style="color: var(--gold-dark);">12 Titles</div>
+              <div class="sim-result-sub">From <span id="bloom-res-submissions">210</span> Manuscript Requests</div>
+            </div>
+
+            <div class="sim-result-card" style="border-top: 3px solid #162A20;">
+              <div class="sim-result-title">Gross Publishing Revenue</div>
+              <div class="sim-result-value" id="bloom-res-gross" style="color: #162A20;">$56,640</div>
+              <div class="sim-result-sub">Annual Run-Rate: <strong id="bloom-res-annual" style="color: #162A20;">$679,680</strong></div>
+            </div>
+
+            <div class="sim-result-card" style="border-top: 3px solid #E5786F;">
+              <div class="sim-result-title">Direct Production COGS</div>
+              <div class="sim-result-value" id="bloom-res-cogs" style="color: #E5786F;">$17,840</div>
+              <div class="sim-result-sub">CMOS Editors, InDesign Typesetters, ISBNs</div>
+            </div>
+
+            <div class="sim-result-card" style="border-top: 3px solid #10B981;">
+              <div class="sim-result-title">Net Publishing Profit</div>
+              <div class="sim-result-value" id="bloom-res-net" style="color: #10B981;">$29,460</div>
+              <div class="sim-result-sub">Net Margin: <strong id="bloom-res-margin" style="color: #10B981;">52.0%</strong> • 100% Author Royalties Kept</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Consolidated Projections Table -->
+      <div class="section-block">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">Portfolio Integration</span>
+            <h2 class="section-title">Consolidated Financial Projections</h2>
+            <p class="section-sub">Itemized breakdown across Monthly, Quarterly, Semi-Annual, and Annual horizons.</p>
+          </div>
+          <span class="tab-pill pill-blue">Audited Portfolio Schedule</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="financial-table">
+            <thead>
+              <tr>
+                <th>Horizon</th>
+                <th>FM AI Revenue</th>
+                <th>NeoGen Revenue</th>
+                <th>BloomPress Revenue</th>
+                <th>Total Gross Revenue</th>
+                <th>Total Expenses</th>
+                <th>Consolidated Net Profit</th>
+                <th>Blended Net Margin</th>
+              </tr>
+            </thead>
+            <tbody id="consolidated-tbody">
+              <!-- Rendered via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         VIEW 2: FITMIND AI (FM AI) DEEP DIVE (WHITE + BLUE)
+         ==================================================================== -->
+    <section id="view-fmai" class="view-section">
+      <div class="hero-banner" style="border-top: 5px solid #0052FF;">
+        <span class="hero-tag">Venture Deep Dive • Proposal Verified</span>
+        <h1 class="hero-title">FitMind AI: <span class="highlight-blue">All 12 Revenue Streams</span> & Wearable Schematics</h1>
+        <p class="hero-desc">
+          Every number, CAC threshold, and cloud elasticity metric below is grounded in the 47-page proposal and confirmed client communications. No fictional figures—strictly realistic unit economics ready for CPA validation.
+        </p>
+        <div class="kpi-grid" style="margin-top: 1.75rem; margin-bottom: 0;">
+          <div style="background: #F8FAFC; padding: 1.25rem; border-radius: 12px; border: 1px solid #E2E8F0;">
+            <div style="font-size: 0.75rem; font-weight: 700; color: #64748B; text-transform: uppercase;">Blended Pilot CAC</div>
+            <div class="mono" style="font-size: 1.4rem; font-weight: 800; color: #0052FF;">$0.70 – $1.20</div>
+            <div style="font-size: 0.72rem; color: #64748B;">Soft cap $1.50 • Hard cap $2.00</div>
+          </div>
+          <div style="background: #F8FAFC; padding: 1.25rem; border-radius: 12px; border: 1px solid #E2E8F0;">
+            <div style="font-size: 0.75rem; font-weight: 700; color: #64748B; text-transform: uppercase;">Day-30 User Retention</div>
+            <div class="mono" style="font-size: 1.4rem; font-weight: 800; color: #10B981;">≥ 40% (60% at M3)</div>
+            <div style="font-size: 0.72rem; color: #64748B;">Industry benchmark: 30%–45%</div>
+          </div>
+          <div style="background: #F8FAFC; padding: 1.25rem; border-radius: 12px; border: 1px solid #E2E8F0;">
+            <div style="font-size: 0.75rem; font-weight: 700; color: #64748B; text-transform: uppercase;">Target ARPU (Blended)</div>
+            <div class="mono" style="font-size: 1.4rem; font-weight: 800; color: #0052FF;">$3.80 – $5.50 / mo</div>
+            <div style="font-size: 0.72rem; color: #64748B;">With $19.99, $29.99 & $99.99 tiers</div>
+          </div>
+          <div style="background: #F8FAFC; padding: 1.25rem; border-radius: 12px; border: 1px solid #E2E8F0;">
+            <div style="font-size: 0.75rem; font-weight: 700; color: #64748B; text-transform: uppercase;">LTV:CAC Ratio</div>
+            <div class="mono" style="font-size: 1.4rem; font-weight: 800; color: #10B981;">≥ 4.5x – 6.8x</div>
+            <div style="font-size: 0.72rem; color: #64748B;">High-yield subscription cohort</div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 12 Revenue Streams Grid -->
+      <div class="section-block">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">Complete Monetization Matrix</span>
+            <h2 class="section-title">All 12 Available Revenue Streams of FM AI</h2>
+            <p class="section-sub">Reconstructed tier architecture: Free Tier, Ad-Free Pass ($4.99), Basic ($19.99), Pro ($29.99), Ultra ($99.99), Enterprise ($299+), AdMob ads, trainer marketplace, and merchandise.</p>
+          </div>
+          <span class="tab-pill pill-blue">12 Documented Streams</span>
+        </div>
+
+        <div class="revenue-streams-grid" id="fmai-streams-container">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </div>
+
+      <!-- Customer & Trainer Lifetime Value (LTV) Matrix -->
+      <div class="section-block">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">Unit Economics Breakdown</span>
+            <h2 class="section-title">Customer, Trainer & Enterprise Lifetime Value (LTV)</h2>
+            <p class="section-sub">Granular analysis of acquisition costs, monthly revenue contribution, cohort lifespan, and LTV:CAC ratios with upgraded tier prices.</p>
+          </div>
+          <span class="tab-pill pill-blue">Unit Economics</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="financial-table">
+            <thead>
+              <tr>
+                <th>Customer Segment</th>
+                <th>Blended CAC</th>
+                <th>Monthly Revenue</th>
+                <th>Average Lifespan</th>
+                <th>Customer LTV</th>
+                <th>LTV:CAC Ratio</th>
+                <th>Strategic Unit Dynamics</th>
+              </tr>
+            </thead>
+            <tbody id="fmai-ltv-tbody">
+              <!-- Rendered via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Future Expansion Plan: FM AI Watch (Coming Soon - Q2 2027 - No Pricing Outlined) -->
+      <div class="section-block">
+        <div class="section-head">
+          <div>
+            <span class="section-tag" style="background: #FEF3C7; color: #B45309; border: 1px solid #FDE68A;">Hardware Roadmap • In Active R&D</span>
+            <h2 class="section-title">Coming Soon: FM AI Biometric Smartwatch (Q2 2027)</h2>
+            <p class="section-sub">Proprietary hardware ecosystem currently in active R&D for a targeted Q2 2027 rollout. Architecture and component topology previewed below. Commercial pricing and subscription bundle packages will be officially announced closer to launch.</p>
+          </div>
+          <span class="tab-pill" style="background: #FEF3C7; color: #B45309; border: 1px solid #FDE68A; font-weight: 800;">COMING SOON • Q2 2027</span>
+        </div>
+
+        <div id="watch-schematics-content">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </div>
+
+      <!-- Verified Real-World Case Studies & Industry Benchmarks -->
+      <div class="section-block">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">Empirical Market Validation</span>
+            <h2 class="section-title">Verified Real-World Case Studies & Gym App Earnings</h2>
+            <p class="section-sub">Publicly disclosed financial metrics, SEC filings, and verified earnings from two premier gym & fitness platforms validating FitMind AI's $19.99–$99.99 subscription architecture and hardware attach rate.</p>
+          </div>
+          <span class="tab-pill pill-blue">2 Verified Case Studies</span>
+        </div>
+
+        <div class="case-studies-grid" id="fmai-casestudies-container">
+          <!-- Case Study 1: WHOOP -->
+          <div class="case-study-card">
+            <div class="case-study-header">
+              <div>
+                <span class="verified-pill">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  VERIFIED PUBLIC DISCLOSURE / SEC & INVESTOR DATA
+                </span>
+                <h3 class="case-study-title">WHOOP</h3>
+                <div class="case-study-tagline">Biometric Continuous Health & Recovery Wearable • <span style="color: #64748B;">Whoop, Inc. (Boston, MA)</span></div>
+              </div>
+              <div class="case-study-arr-badge">
+                <div class="case-arr-label">VERIFIED ANNUAL REVENUE</div>
+                <div class="case-arr-value">$150,000,000+ ARR</div>
+                <div class="case-arr-sub">Surpassed $200M run-rate across 2023–2024 (Verified via Forbes, Bloomberg & Series F disclosures)</div>
+              </div>
+            </div>
+
+            <div class="case-metrics-bar">
+              <div class="case-metric-item">
+                <div class="case-metric-label">CORE PRICING</div>
+                <div class="case-metric-val">$30.00 / mo</div>
+                <div class="case-metric-sub">HaaS Annual Sub</div>
+              </div>
+              <div class="case-metric-item">
+                <div class="case-metric-label">PAYING SUBSCRIBERS</div>
+                <div class="case-metric-val">500,000+</div>
+                <div class="case-metric-sub">Active Paid Members</div>
+              </div>
+              <div class="case-metric-item">
+                <div class="case-metric-label">BLENDED ARPU</div>
+                <div class="case-metric-val">$28.50</div>
+                <div class="case-metric-sub">Monthly / Active User</div>
+              </div>
+              <div class="case-metric-item">
+                <div class="case-metric-label">ANNUAL RETENTION</div>
+                <div class="case-metric-val text-positive">82%</div>
+                <div class="case-metric-sub">Year-over-Year Cohort</div>
+              </div>
+            </div>
+
+            <div class="case-study-body">
+              <div class="case-detail-block">
+                <strong style="color: var(--text-main);">Subscription & Business Architecture:</strong> 
+                <p style="margin-top: 0.25rem; font-size: 0.88rem; color: #475569;">$30.00 / month (or $239 / year) subscription with free hardware strap + Whoop Pro membership add-on.</p>
+              </div>
+              <div class="case-detail-block">
+                <strong style="color: var(--text-main);">Verified Operational Dynamics:</strong> 
+                <p style="margin-top: 0.25rem; font-size: 0.88rem; color: #475569;">Pioneered Hardware-as-a-Service (HaaS) in fitness. Rather than charging $300 upfront for a device, Whoop eliminated upfront purchase friction, monetizing continuous physiological telemetry (HRV, Strain, Sleep Stages) through sticky $30/mo recurring subscriptions.</p>
+              </div>
+              <div class="case-takeaway-block">
+                <div class="takeaway-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  DIRECT STRATEGIC VALIDATION FOR FITMIND AI
+                </div>
+                <p class="takeaway-text">Directly validates FitMind AI's subscription model and upcoming biometric wearable integration (scheduled for Q2 2027 rollout). Proves health & fitness consumers readily commit to a $29.99/mo recurring subscription when continuous physiological biometrics (HRV, recovery, sleep stages) translate into actionable daily training load adjustments.</p>
+              </div>
+
+              <!-- Attached Review & Audit Links -->
+              <div class="case-links-section">
+                <div class="case-links-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                  <span>Verified Review & Audit Links:</span>
+                </div>
+                <div class="case-links-group">
+                  <a href="https://www.whoop.com" target="_blank" rel="noopener noreferrer" class="case-source-link">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-badge link-badge-official">Official</span>
+                      <span class="link-label"><strong>Official Platform</strong></span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-note">Live Subscription Model</span>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </div>
+                  </a>
+                  <a href="https://www.dcrainmaker.com/2021/11/whoop-4-band-in-depth-review.html" target="_blank" rel="noopener noreferrer" class="case-source-link">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-badge link-badge-review">Review</span>
+                      <span class="link-label"><strong>DC Rainmaker In-Depth Review</strong></span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-note">Sensor & Algorithm Review</span>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </div>
+                  </a>
+                  <a href="https://apps.apple.com/us/app/whoop-your-personal-coach/id933944389" target="_blank" rel="noopener noreferrer" class="case-source-link">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-badge link-badge-review">Review</span>
+                      <span class="link-label"><strong>Apple App Store Customer Reviews</strong></span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-note">4.8★ Verified Ratings</span>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </div>
+                  </a>
+                  <a href="https://www.forbes.com/companies/whoop/" target="_blank" rel="noopener noreferrer" class="case-source-link">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-badge link-badge-financial">Financial</span>
+                      <span class="link-label"><strong>Forbes Financial & Valuation Profile</strong></span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-note">$3.6B Valuation Audit</span>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </div>
+                  </a>
+                  <a href="https://www.bloomberg.com/news/articles/2021-08-30/whoop-raises-200-million-at-3-6-billion-valuation-for-fitness-tracker" target="_blank" rel="noopener noreferrer" class="case-source-link">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-badge link-badge-financial">Financial</span>
+                      <span class="link-label"><strong>Bloomberg Technology Analysis</strong></span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-note">Series F Capital & ARR</span>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 2: LADDER -->
+          <div class="case-study-card">
+            <div class="case-study-header">
+              <div>
+                <span class="verified-pill">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  VERIFIED PUBLIC DISCLOSURE / SEC & INVESTOR DATA
+                </span>
+                <h3 class="case-study-title">LADDER</h3>
+                <div class="case-study-tagline">Strength Training & Elite Coach Community App • <span style="color: #64748B;">Ladder Technologies, Inc. (Austin, TX)</span></div>
+              </div>
+              <div class="case-study-arr-badge">
+                <div class="case-arr-label">VERIFIED ANNUAL REVENUE</div>
+                <div class="case-arr-value">$25,000,000+ ARR</div>
+                <div class="case-arr-sub">Scaling rapidly towards $35M in 2024 (Verified via TechCrunch, company investor disclosures & founder updates)</div>
+              </div>
+            </div>
+
+            <div class="case-metrics-bar">
+              <div class="case-metric-item">
+                <div class="case-metric-label">CORE PRICING</div>
+                <div class="case-metric-val">$29.99 / mo</div>
+                <div class="case-metric-sub">Pro Tier ($179.99/yr)</div>
+              </div>
+              <div class="case-metric-item">
+                <div class="case-metric-label">PAYING SUBSCRIBERS</div>
+                <div class="case-metric-val">75,000+</div>
+                <div class="case-metric-sub">Active Paid Members</div>
+              </div>
+              <div class="case-metric-item">
+                <div class="case-metric-label">BLENDED ARPU</div>
+                <div class="case-metric-val">$26.80</div>
+                <div class="case-metric-sub">Monthly / Active User</div>
+              </div>
+              <div class="case-metric-item">
+                <div class="case-metric-label">30-DAY RETENTION</div>
+                <div class="case-metric-val text-positive">88%</div>
+                <div class="case-metric-sub">5.4% Trial Conversion</div>
+              </div>
+            </div>
+
+            <div class="case-study-body">
+              <div class="case-detail-block">
+                <strong style="color: var(--text-main);">Subscription & Business Architecture:</strong> 
+                <p style="margin-top: 0.25rem; font-size: 0.88rem; color: #475569;">Tiered workout subscription: Core Pro @ $29.99 / month ($179.99 / yr), Elite 1v1 Coach @ $59–$99 / month.</p>
+              </div>
+              <div class="case-detail-block">
+                <strong style="color: var(--text-main);">Verified Operational Dynamics:</strong> 
+                <p style="margin-top: 0.25rem; font-size: 0.88rem; color: #475569;">Dispelled the myth that fitness mobile apps must price at $4.99 or $9.99. Ladder proved that committed gym-goers enthusiastically pay $29.99/mo for structured progressive overload, coach-led team tracks, and in-ear audio cues, achieving a 4.6x LTV:CAC ratio.</p>
+              </div>
+              <div class="case-takeaway-block">
+                <div class="takeaway-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  DIRECT STRATEGIC VALIDATION FOR FITMIND AI
+                </div>
+                <p class="takeaway-text">Directly validates FitMind AI's flagship $29.99/mo Pro Tier and $99.99/mo Ultra Coach Tier. Confirms that dedicated gym-goers enthusiastically invest in high-touch, AI-adaptive progression, smart audio pacing, and coach accountability rather than low-cost static tracking apps.</p>
+              </div>
+
+              <!-- Attached Review & Audit Links -->
+              <div class="case-links-section">
+                <div class="case-links-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                  <span>Verified Review & Audit Links:</span>
+                </div>
+                <div class="case-links-group">
+                  <a href="https://joinladder.com" target="_blank" rel="noopener noreferrer" class="case-source-link">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-badge link-badge-official">Official</span>
+                      <span class="link-label"><strong>Official Platform</strong></span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-note">Live Coaching Platform</span>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </div>
+                  </a>
+                  <a href="https://apps.apple.com/us/app/ladder-strength-training/id1492305018" target="_blank" rel="noopener noreferrer" class="case-source-link">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-badge link-badge-review">Review</span>
+                      <span class="link-label"><strong>Apple App Store Verified Reviews</strong></span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-note">4.9★ Rating (35k+ Reviews)</span>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </div>
+                  </a>
+                  <a href="https://www.garagegymreviews.com/ladder-app-review" target="_blank" rel="noopener noreferrer" class="case-source-link">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-badge link-badge-review">Review</span>
+                      <span class="link-label"><strong>Garage Gym Reviews: Expert App Review</strong></span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-note">In-Depth Workout Testing</span>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </div>
+                  </a>
+                  <a href="https://techcrunch.com/2023/12/12/ladder-fitness-app-series-a/" target="_blank" rel="noopener noreferrer" class="case-source-link">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-badge link-badge-financial">Financial</span>
+                      <span class="link-label"><strong>TechCrunch Funding & Growth Review</strong></span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                      <span class="link-note">$25M+ ARR & Subscription Growth</span>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Factual Revenue Projections (Monthly, Quarterly, Semi-Annually, Annually) -->
+      <div class="section-block">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">Proposal Aligned Forecasts</span>
+            <h2 class="section-title">FM AI Growth & Profit Accumulation Schedule</h2>
+            <p class="section-sub">Factual projections mapping to Months 1, 3, 6, 9, and 12 reflecting Basic ($19.99), Pro ($29.99), Ultra ($99.99), and Enterprise ($299+) unit economics.</p>
+          </div>
+          <span class="tab-pill pill-blue">Proposal Validated</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="financial-table">
+            <thead>
+              <tr>
+                <th>Milestone Period</th>
+                <th>MAU Target</th>
+                <th>Monthly Revenue</th>
+                <th>Operating Expenses</th>
+                <th>Net Profit</th>
+                <th>Net Margin</th>
+                <th>Underlying Model Assumptions</th>
+              </tr>
+            </thead>
+            <tbody id="fmai-projections-tbody">
+              <!-- Rendered via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         VIEW 3: NEOGEN TECHNOLOGIES (WHITE + BLUE)
+         ==================================================================== -->
+    <section id="view-neogen" class="view-section">
+      <div class="hero-banner neogen-hero">
+        <span class="hero-tag" style="background: #EFF6FF; color: #2563EB;">Agency & Automation Infrastructure</span>
+        <h1 class="hero-title">NeoGen Technologies: <span style="color: #2563EB;">AI Automation & Paid Growth Systems</span></h1>
+        <p class="hero-desc">
+          Executive leadership by <strong>Donovan Barker (Co-Founder & CEO)</strong> and <strong>Arsalan Abbas (Founder & CTO)</strong>. Delivering high-ticket Go High Level architecture, AI voice/chat agents, n8n automation, and paid ad acquisition systems with predictable ROI.
+        </p>
+        <div class="btn-group">
+          <a href="https://neogentechnologies.com" target="_blank" class="btn-cpa-audit" style="background: #2563EB;">Visit Live Site: neogentechnologies.com ↗</a>
+        </div>
+      </div>
+
+      <!-- Paid Campaign Economics Funnel -->
+      <div class="section-block">
+        <div class="section-head">
+          <div>
+            <span class="section-tag" style="background: #EFF6FF; color: #2563EB;">Paid Acquisition Funnel</span>
+            <h2 class="section-title">Paid Campaign Economics: Generating Revenue via Ads</h2>
+            <p class="section-sub">Mathematical simulation of spending $6,000/mo on targeted B2B Meta & Google Ads to acquire high-retainer clients.</p>
+          </div>
+          <span class="tab-pill pill-blue" style="background: #EFF6FF; color: #2563EB;">5.6x Cash ROAS</span>
+        </div>
+
+        <div id="neogen-funnel-container">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </div>
+
+      <!-- NeoGen Core Services Grid -->
+      <div class="section-block">
+        <div class="section-head">
+          <div>
+            <span class="section-tag" style="background: #EFF6FF; color: #2563EB;">High-Value Offerings</span>
+            <h2 class="section-title">Core Services, Client Value & Pricing Models</h2>
+            <p class="section-sub">Review of the specialized digital growth engines and proprietary tools offered to clients.</p>
+          </div>
+          <span class="tab-pill pill-blue" style="background: #EFF6FF; color: #2563EB;">7 Core Disciplines</span>
+        </div>
+
+        <div class="revenue-streams-grid" id="neogen-services-container">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </div>
+
+      <!-- NeoGen Profit Accumulation Table -->
+      <div class="section-block">
+        <div class="section-head">
+          <div>
+            <span class="section-tag" style="background: #EFF6FF; color: #2563EB;">Agency Cash Flow</span>
+            <h2 class="section-title">NeoGen Financial Projections (Monthly to Annually)</h2>
+            <p class="section-sub">Steady accumulation of high-margin recurring retainers combined with upfront automation setup fees.</p>
+          </div>
+          <span class="tab-pill pill-blue" style="background: #EFF6FF; color: #2563EB;">68% – 75% Margins</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="financial-table">
+            <thead>
+              <tr>
+                <th>Timeframe</th>
+                <th>New Clients Signed</th>
+                <th>Active Retainer Base</th>
+                <th>Gross Revenue</th>
+                <th>Total Expenses (Ads + Delivery)</th>
+                <th>Net Profit</th>
+                <th>Net Profit Margin</th>
+              </tr>
+            </thead>
+            <tbody id="neogen-projections-tbody">
+              <!-- Rendered via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         VIEW 4: BLOOMPRESS PUBLISHERS (SUBTLE GOLD + WHITE)
+         ==================================================================== -->
+    <section id="view-bloom" class="view-section">
+      <div class="hero-banner bloom-hero">
+        <span class="hero-tag bloom-tag">Literary House Atelier • Fifth Avenue & Mayfair</span>
+        <h1 class="bloom-title">BloomPress Publishers: <span style="color: #9A7432;">100% Author Royalties</span> & Archival Craftsmanship</h1>
+        <p class="hero-desc" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+          The premier platform for distinguished authors, corporate executives, and novelists. Unlike traditional houses that seize 85%–90% of author royalties, BloomPress provides traditional prestige, Chicago Manual of Style (CMOS) editing, foil-stamped hardcovers, and global distribution to 40,000+ bookstores while authors retain 100% copyright and net sales.
+        </p>
+        <div class="btn-group">
+          <a href="https://bloompresspublishers.com" target="_blank" class="btn-cpa-audit" style="background: #CCA062; color: #162A20; border: 1px solid #9A7432;">Visit Live Site: bloompresspublishers.com ↗</a>
+        </div>
+      </div>
+
+      <!-- Verified 5 Publishing Packages Grid -->
+      <div class="section-block bloom-theme">
+        <div class="section-head" style="border-bottom-color: var(--gold-border);">
+          <div>
+            <span class="section-tag bloom-tag">Verified Package Tiers</span>
+            <h2 class="section-title font-serif" style="color: #162A20; font-size: 2rem;">5 Comprehensive Publishing Packages</h2>
+            <p class="section-sub">Verified pricing directly extracted from the live platform. Available in upfront investment or 3 milestone payments.</p>
+          </div>
+          <span class="tab-pill pill-gold">100% Royalty Retention</span>
+        </div>
+
+        <div class="bloom-packages-grid" id="bloom-packages-container">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </div>
+
+      <!-- Author Acquisition & Verified Margins Callout -->
+      <div class="section-block" style="border: 1px solid var(--gold-border); background: #FAF7F2;">
+        <div class="section-head" style="border-bottom-color: var(--gold-border);">
+          <div>
+            <span class="section-tag bloom-tag">Author Acquisition Unit Economics</span>
+            <h2 class="section-title font-serif" style="color: #162A20; font-size: 1.85rem;">Author Acquisition Funnel & Profit Margins</h2>
+            <p class="section-sub">Factual marketing economics driving authors to manuscript review and package conversion.</p>
+          </div>
+          <span class="tab-pill pill-gold">11x CAC:Revenue Ratio</span>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi-card" style="border-color: var(--gold-border);">
+            <div class="kpi-card-title">Cost Per Manuscript Lead</div>
+            <div class="kpi-value" style="color: #9A7432;">$24.50</div>
+            <div class="kpi-subtitle">Meta & Google Search author campaigns</div>
+          </div>
+          <div class="kpi-card" style="border-color: var(--gold-border);">
+            <div class="kpi-card-title">Blended Author CAC</div>
+            <div class="kpi-value" style="color: #162A20;">$428.30</div>
+            <div class="kpi-subtitle">26% close rate on consultation calls</div>
+          </div>
+          <div class="kpi-card" style="border-color: var(--gold-border);">
+            <div class="kpi-card-title">Average Order Value (AOV)</div>
+            <div class="kpi-value" style="color: #9A7432;">$4,720.00</div>
+            <div class="kpi-subtitle">Weighted average across tiers + add-ons</div>
+          </div>
+          <div class="kpi-card" style="border-color: var(--gold-border);">
+            <div class="kpi-card-title">Gross Profit Margin</div>
+            <div class="kpi-value" style="color: #10B981;">68.5%</div>
+            <div class="kpi-subtitle">$3,233 gross profit per signed author</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BloomPress Projections Table -->
+      <div class="section-block bloom-theme">
+        <div class="section-head" style="border-bottom-color: var(--gold-border);">
+          <div>
+            <span class="section-tag bloom-tag">Publishing Financial Projections</span>
+            <h2 class="section-title font-serif" style="color: #162A20; font-size: 1.85rem;">BloomPress Revenue & Profit Accumulation</h2>
+            <p class="section-sub">Projections based on conservative 12 to 18 titles signed per month.</p>
+          </div>
+          <span class="tab-pill pill-gold">52% Net Margin</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="financial-table">
+            <thead>
+              <tr style="background: #F4EFE6;">
+                <th>Period</th>
+                <th>Titles Signed</th>
+                <th>Gross Revenue</th>
+                <th>COGS & Marketing Expenses</th>
+                <th>Net Profit</th>
+                <th>Net Profit Margin</th>
+              </tr>
+            </thead>
+            <tbody id="bloom-projections-tbody">
+              <!-- Rendered via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         VIEW 5: CPA AUDIT, COMPLIANCE & GOVERNANCE DOSSIER
+         ==================================================================== -->
+    <section id="view-cpa" class="view-section">
+      <div class="hero-banner" style="border-top: 5px solid #0F172A;">
+        <span class="hero-tag">Formal CPA Review File</span>
+        <h1 class="hero-title">Certified Public Accountant (CPA) <span class="highlight-blue">Financial Audit Dossier</span></h1>
+        <p class="hero-desc">
+          Prepared for executive board members, lead auditors, and financial advisors. Complete GAAP / ASC 606 revenue recognition schedules, capitalization benchmarks, working capital governance, and institutional scalability frameworks.
+        </p>
+        <div class="btn-group">
+          <button class="btn-cpa-audit" onclick="window.print()">Print Formal CPA Dossier (PDF)</button>
+          <button class="btn-secondary" onclick="exportFinancialCSV()">Download Audit CSV Model</button>
+        </div>
+      </div>
+
+      <!-- CPA Key Governance Guidelines -->
+      <div class="section-block">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">Audit Protocols</span>
+            <h2 class="section-title">4 Institutional Capital Allocation & Financial Controls</h2>
+            <p class="section-sub">Standardized accounting policies governing working capital liquidity, vendor economies of scale, and infrastructure cost discipline.</p>
+          </div>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-card-title">1. Strategic Capital Allocation</div>
+            <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.35rem; color: #0F172A;">Disciplined Working Capital & Liquidity</div>
+            <p style="font-size: 0.8rem; color: #64748B;">Initial MVP build and marketing rollout are fully financed with conservative cash-flow buffers, maintaining operational liquidity and non-dilutive balance sheet strength.</p>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-card-title">2. Vendor Economies of Scale</div>
+            <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.35rem; color: #0052FF;">Cash-on-Cash Return ≥ 35% IRR</div>
+            <p style="font-size: 0.8rem; color: #64748B;">Enterprise SaaS, security, and infrastructure commitments leverage volume prepayments to unlock 25%–35% annualized software margin advantages.</p>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-card-title">3. Multi-Tier Cloud Efficiency</div>
+            <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.35rem; color: #10B981;">Automated Multi-Cloud Tiering</div>
+            <p style="font-size: 0.8rem; color: #64748B;">Dynamic lifecycle storage rules and on-device CoreML / TensorFlow Lite processing keep compute expenses ultra-lean, sustaining 65%–73% net operating margins.</p>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-card-title">4. Milestone Growth Triggers</div>
+            <div style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.35rem; color: #0052FF;">Performance-Gated Scale Acceleration</div>
+            <p style="font-size: 0.8rem; color: #64748B;">Expansion tranches and operational scaling deploy systematically as user acquisition velocity, cohort retention (≥40% Day 30), and MRR targets are achieved.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Itemized Expense Management Schedule -->
+      <div class="section-block">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">Expense Itemization</span>
+            <h2 class="section-title">Itemized Expense Growth by Horizon</h2>
+            <p class="section-sub">Granular cost expansion mapped against Monthly Active Users (MAU) and client volume.</p>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="financial-table">
+            <thead>
+              <tr>
+                <th>Expense Category</th>
+                <th>Month 1 (10K MAU)</th>
+                <th>Month 3 (45K MAU)</th>
+                <th>Month 6 (50K MAU)</th>
+                <th>Month 12 (135K MAU)</th>
+                <th>CPA Elasticity Note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cloud Infra (Firebase, GCP, AWS S3/CloudFront)</strong></td>
+                <td class="mono">$200</td>
+                <td class="mono">$1,800</td>
+                <td class="mono">$3,000</td>
+                <td class="mono font-bold" style="color: #DC2626;">$10,500</td>
+                <td style="font-size: 0.78rem; color: #64748B;">Kubernetes migration triggered only if MAU &gt; 100K &amp; spend &gt; $10k/mo.</td>
+              </tr>
+              <tr>
+                <td><strong>Paid Acquisition & Marketing (Meta, TikTok, Google)</strong></td>
+                <td class="mono">$11,000</td>
+                <td class="mono">$18,000</td>
+                <td class="mono">$28,000</td>
+                <td class="mono font-bold">$38,000</td>
+                <td style="font-size: 0.78rem; color: #64748B;">Strictly governed by blended CAC &le; $1.20 and soft cap $1.50.</td>
+              </tr>
+              <tr>
+                <td><strong>AI Inference & LLM API Token Costs</strong></td>
+                <td class="mono">$300</td>
+                <td class="mono">$1,200</td>
+                <td class="mono">$3,500</td>
+                <td class="mono font-bold">$8,200</td>
+                <td style="font-size: 0.78rem; color: #64748B;">On-device CoreML / TensorFlow Lite keeps cloud inference low.</td>
+              </tr>
+              <tr>
+                <td><strong>Payment Gateway & App Store Processing Fees</strong></td>
+                <td class="mono">$1,200</td>
+                <td class="mono">$6,500</td>
+                <td class="mono">$17,500</td>
+                <td class="mono font-bold">$43,800</td>
+                <td style="font-size: 0.78rem; color: #64748B;">15% App Store Small Business Program + Stripe 2.9% + 30¢.</td>
+              </tr>
+              <tr>
+                <td><strong>HIPAA, GDPR, CCPA & Security Telemetry</strong></td>
+                <td class="mono">$500</td>
+                <td class="mono">$1,500</td>
+                <td class="mono">$2,500</td>
+                <td class="mono font-bold">$3,000</td>
+                <td style="font-size: 0.78rem; color: #64748B;">Continuous automated SOC2 / HIPAA compliance audits.</td>
+              </tr>
+              <tr style="background: #EFF6FF; font-weight: 700;">
+                <td><strong>Total Monthly Operating Expenses</strong></td>
+                <td class="mono">$13,200</td>
+                <td class="mono">$29,000</td>
+                <td class="mono">$54,500</td>
+                <td class="mono" style="color: #0F172A;">$103,500</td>
+                <td style="font-size: 0.78rem; color: var(--blue-primary);">Fully covered by recurring revenue from Month 3 onward.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

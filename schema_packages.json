@@ -1,0 +1,23 @@
+{
+  "@context": "https://schema.org",
+  "@type": "OfferCatalog",
+  "name": "BloomPress Publishing Packages",
+  "description": "All-inclusive literary publishing packages for independent and professional authors",
+  "itemListElement": [
+    {
+      "@type": "Offer",
+      "name": "The Novella / Standard Publishing Package",
+      "description": "Complete publishing setup with CMOS editing, custom cover, interior formatting, and global distribution."
+    },
+    {
+      "@type": "Offer",
+      "name": "The Masterpiece / Bestseller Package",
+      "description": "Includes developmental editing, custom hardcover with foil stamping, master audiobook production, and launch PR campaign."
+    },
+    {
+      "@type": "Offer",
+      "name": "The Legacy / Executive Package",
+      "description": "Complete ghostwriting, executive book coaching, international distribution, and full media tour promotion."
+    }
+  ]
+}
