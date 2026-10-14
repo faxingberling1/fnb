@@ -309,7 +309,7 @@ const VENTURE_DATA = {
         expenses: 108500, // UA ($45K) + Infra ($6.5K) + AI token GPU scale + 22 Enterprise Gym accounts
         netProfit: 233500,
         margin: "68.3%",
-        note: "Accelerated word-of-mouth (K-factor 1.25). Enterprise gym white-label scaling. FM AI Watch sales attach active."
+        note: "Accelerated word-of-mouth (K-factor 1.25). Enterprise gym white-label scaling + high-margin trainer marketplace expansion."
       },
       {
         period: "Month 12 (Year 1)",
