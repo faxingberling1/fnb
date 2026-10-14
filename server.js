@@ -92,6 +92,9 @@ const server = http.createServer((req, res) => {
   }
 
   let filePath = path.join(PUBLIC_DIR, safePath);
+  if (!fs.existsSync(filePath)) {
+    filePath = path.join(__dirname, safePath);
+  }
 
   // If path doesn't have an extension and exists as directory, check for index.html
   if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
