@@ -42,10 +42,6 @@
 
       <!-- Nav Actions & Mobile Toggle -->
       <div class="nav-actions">
-        <button class="btn-secondary" onclick="exportFinancialCSV()" title="Export Consolidated Financial CSV" style="font-size: 0.82rem; padding: 0.45rem 0.85rem;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span>Export CSV</span>
-        </button>
         <button class="btn-mobile-toggle" id="btn-mobile-menu" aria-label="Toggle mobile menu" aria-expanded="false">
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
@@ -106,13 +102,6 @@
             </div>
           </a>
         </div>
-
-        <div class="drawer-actions">
-          <button class="btn-primary" style="width:100%; justify-content:center;" onclick="exportFinancialCSV(); closeMobileDrawer();">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span>Download Financial Model (CSV)</span>
-          </button>
-        </div>
       </div>
     </div>
   </header>
@@ -161,10 +150,6 @@
           <a href="/investment-allocation.html" class="btn-secondary" style="background:#EFF6FF; border-color:#BFDBFE; color:#1E40AF;">
             <span>Investment Required ↗</span>
           </a>
-          <button class="btn-secondary" onclick="exportFinancialCSV()">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span>Export Consolidated Model (CSV)</span>
-          </button>
         </div>
       </div>
 
@@ -230,10 +215,6 @@
             </p>
           </div>
           <div class="btn-group">
-            <button class="btn-secondary" id="btn-export-csv">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              <span>Export CSV Model</span>
-            </button>
             <button class="btn-secondary" id="btn-print-audit" onclick="window.print()">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
               <span>Print Financial Schedule</span>
