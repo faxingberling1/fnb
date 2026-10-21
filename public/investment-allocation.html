@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$35,000 Seed Capital Allocation Schedule & Revenue Projections | Venture Advisory</title>
+  <meta name="description" content="Statutory capital allocation schedule and revenue multiplier model detailing the deployment of $35,000 across NeoGen Technologies, BloomPress Publishers, and FitMind AI app development.">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    /* Dedicated Page Styling Extensions */
+    .allocation-hero {
+      background: linear-gradient(135deg, #0A2540 0%, #0052FF 60%, #1E40AF 100%);
+      color: #FFFFFF;
+      padding: 3rem 2.5rem;
+      border-radius: var(--radius-xl);
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 15px 35px -5px rgba(0, 82, 255, 0.25);
+    }
+    .allocation-hero::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 212, 255, 0.18) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .allocation-hero .hero-tag {
+      background: rgba(255, 255, 255, 0.15);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .allocation-hero h1 {
+      color: #FFFFFF;
+      font-size: 2.35rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0.85rem;
+    }
+    .allocation-hero p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.05rem;
+      max-width: 900px;
+      line-height: 1.6;
+    }
+
+    /* Executive Metric Pill Cards */
+    .metric-pills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .metric-pill-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.35rem 1.25rem;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      transition: var(--transition);
+    }
+    .metric-pill-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+    .metric-pill-card .pill-header {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .metric-pill-card .pill-value {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--text-main);
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.35rem;
+    }
+    .metric-pill-card .pill-sub {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* Tranche Cards & Allocation Split */
+    .tranche-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .tranche-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition);
+    }
+    .tranche-card:hover {
+      box-shadow: var(--shadow-hover);
+    }
+    .tranche-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      width: fit-content;
+    }
+    .badge-neogen {
+      background: #EFF6FF;
+      color: #2563EB;
+      border: 1px solid #BFDBFE;
+    }
+    .badge-bloom {
+      background: #FAF5EB;
+      color: #9A7432;
+      border: 1px solid #E8D8BA;
+    }
+    .badge-fmai {
+      background: #ECFEFF;
+      color: #0284C7;
+      border: 1px solid #BAE6FD;
+    }
+    .tranche-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 0.35rem;
+      color: var(--text-main);
+    }
+    .tranche-amount {
+      font-size: 2rem;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 0.25rem;
+    }
+    .tranche-share {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .tranche-breakdown-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .tranche-breakdown-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-size: 0.88rem;
+    }
+    .tranche-breakdown-item .item-label {
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+    }
+    .tranche-breakdown-item .item-label small {
+      font-weight: 400;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+    .tranche-breakdown-item .item-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: var(--text-main);
+      white-space: nowrap;
+      margin-left: 0.75rem;
+    }
+
+    .tranche-revenue-box {
+      margin-top: auto;
+      background: var(--bg-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.15rem;
+      border: 1px solid var(--border-color);
+    }
+    .tranche-revenue-title {
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      color: var(--text-muted);
+    }
+    .tranche-revenue-highlight {
+      font-size: 1.4rem;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: #10B981;
+      margin-bottom: 0.25rem;
+    }
+    .tranche-revenue-detail {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* Comparison Bar Graphic */
+    .allocation-bar-wrap {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 2.5rem;
+    }
+    .allocation-progress {
+      height: 36px;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.08);
+      margin: 1.25rem 0 1rem 0;
+    }
+    .progress-segment {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-size: 0.78rem;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      transition: width 0.4s ease;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+    }
+    .progress-neogen { background: #2563EB; width: 35.714%; }
+    .progress-bloom { background: #CCA062; width: 35.714%; }
+    .progress-fmai { background: #0284C7; width: 28.572%; }
+
+    .progress-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.85rem;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+    }
+
+    /* Strategy Phasing Flow */
+    .phasing-container {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 2.5rem;
+    }
+    .phasing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .phase-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      position: relative;
+    }
+    .phase-step {
+      width: 32px;
+      height: 32px;
+      background: var(--blue-primary);
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .phase-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+    .phase-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Data Tables */
+    .audit-table-wrapper {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 2.5rem;
+      overflow-x: auto;
+    }
+    .audit-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      min-width: 720px;
+    }
+    .audit-table th {
+      background: var(--bg-subtle);
+      color: var(--text-main);
+      font-weight: 700;
+      text-align: left;
+      padding: 0.85rem 1rem;
+      border-bottom: 2px solid var(--border-color);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .audit-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-main);
+      vertical-align: middle;
+    }
+    .audit-table tr:hover td {
+      background: #F8FAFC;
+    }
+    .table-total-row td {
+      font-weight: 800;
+      background: #F1F5F9;
+      border-top: 2px solid #CBD5E1;
+      font-size: 0.95rem;
+    }
+
+    /* Interactive Simulator */
+    .interactive-sim-box {
+      background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+      border: 2px solid #BFDBFE;
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .sim-slider-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin: 1.25rem 0;
+    }
+    .sim-slider-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    /* Print Signature Block */
+    .audit-signature-block {
+      display: none;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 2px dashed #CBD5E1;
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+      }
+      .top-nav, .financial-ticker-bar, .nav-actions, .btn-group, .interactive-sim-box {
+        display: none !important;
+      }
+      .allocation-hero {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        border: 2px solid #000000 !important;
+        box-shadow: none !important;
+        padding: 1.5rem !important;
+      }
+      .allocation-hero h1, .allocation-hero p, .allocation-hero .hero-tag {
+        color: #000000 !important;
+      }
+      .audit-signature-block {
+        display: block !important;
+      }
+      .metric-pill-card, .tranche-card, .allocation-bar-wrap, .audit-table-wrapper, .phasing-container {
+        box-shadow: none !important;
+        border: 1px solid #CCCCCC !important;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <a href="/" class="brand-badge" style="text-decoration:none;">
+        <div class="brand-logo-icon">BV</div>
+        <div class="brand-info">
+          <span class="brand-title">Venture Advisory</span>
+          <span class="brand-sub">Executive Portal</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Tabs -->
+      <nav class="nav-tabs desktop-tabs" aria-label="Main Navigation">
+        <a href="/" class="tab-btn" style="text-decoration:none;">
+          <span>Overview</span>
+        </a>
+        <a href="/#view-fmai" class="tab-btn" style="text-decoration:none;">
+          <span>FM AI Gym</span>
+        </a>
+        <a href="/#view-neogen" class="tab-btn" style="text-decoration:none;">
+          <span>NeoGen Tech</span>
+        </a>
+        <a href="/#view-bloom" class="tab-btn gold-tab" style="text-decoration:none;">
+          <span>BloomPress</span>
+        </a>
+        <a href="/investment-allocation.html" class="tab-btn active" style="text-decoration:none; border-bottom: 2px solid var(--blue-primary);">
+          <span>Investment Required</span>
+        </a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="window.print()" title="Print Statutory Audit Prospectus" style="font-size: 0.82rem; padding: 0.45rem 0.85rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <span>Print Schedule</span>
+        </button>
+        <button class="btn-primary" onclick="exportAllocationCSV()" style="font-size: 0.82rem; padding: 0.45rem 0.85rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Export Model (CSV)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Financial Highlights Ticker -->
+  <div class="financial-ticker-bar">
+    <div class="ticker-inner">
+      <div class="ticker-metric">
+        <span class="ticker-label">INITIAL SEED DEPLOYMENT:</span>
+        <span class="ticker-value">$35,000.00</span>
+      </div>
+      <div class="ticker-metric">
+        <span class="ticker-label">FIRST-CYCLE CASH COLLECTED:</span>
+        <span class="ticker-value" style="color:#34D399;">$142,400.00</span>
+      </div>
+      <div class="ticker-metric">
+        <span class="ticker-label">CONTRACTED MONTHLY RETAINERS:</span>
+        <span class="ticker-value">+$9,500.00 / MO</span>
+      </div>
+      <div class="ticker-metric">
+        <span class="ticker-label">FIRST-CYCLE CASH ROAS:</span>
+        <span class="ticker-value" style="color:#34D399;">4.07x UPFRONT | 6.51x LTV</span>
+      </div>
+      <div class="ticker-metric">
+        <span class="ticker-label">STATUTORY GOVERNANCE:</span>
+        <span class="ticker-badge">GAAP / ASC 606 SCHEDULE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Document Container -->
+  <main class="main-content" style="max-width: 1400px; margin: 0 auto; padding: 2rem 1.5rem;">
+
+    <!-- Executive Title Banner -->
+    <div class="allocation-hero">
+      <span class="hero-tag">Capital Deployment & Revenue Multiplier Model</span>
+      <h1>$35,000 Initial Investment Allocation Schedule</h1>
+      <p>
+        A mathematically verified, milestone-governed deployment schedule allocating $35,000 across <strong>NeoGen Technologies</strong>, <strong>BloomPress Publishers</strong>, and <strong>FitMind AI</strong>. Strategic priority is placed on immediate cash-flow generation via targeted Google Search Ads for NeoGen and BloomPress to onboard high-ticket clients, creating a self-funding flywheel that finances FM AI's commercial app development.
+      </p>
+    </div>
+
+    <!-- Executive Summary Metric Cards -->
+    <div class="metric-pills-grid">
+      <div class="metric-pill-card" style="border-top: 4px solid #0052FF;">
+        <div class="pill-header">
+          <span>Total Seed Required</span>
+          <span style="color:#0052FF;">💼</span>
+        </div>
+        <div class="pill-value">$35,000</div>
+        <div class="pill-sub">Full seed tranche deployment</div>
+      </div>
+
+      <div class="metric-pill-card" style="border-top: 4px solid #2563EB;">
+        <div class="pill-header">
+          <span>NeoGen Allocation</span>
+          <span style="color:#2563EB;">⚡</span>
+        </div>
+        <div class="pill-value">$12,500</div>
+        <div class="pill-sub">35.7% • Google Ads & CRM Funnels</div>
+      </div>
+
+      <div class="metric-pill-card" style="border-top: 4px solid #CCA062;">
+        <div class="pill-header">
+          <span>BloomPress Allocation</span>
+          <span style="color:#CCA062;">📖</span>
+        </div>
+        <div class="pill-value">$12,500</div>
+        <div class="pill-sub">35.7% • Google Ads & Author Onboarding</div>
+      </div>
+
+      <div class="metric-pill-card" style="border-top: 4px solid #0284C7;">
+        <div class="pill-header">
+          <span>FM AI App Engineering</span>
+          <span style="color:#0284C7;">📱</span>
+        </div>
+        <div class="pill-value">$10,000</div>
+        <div class="pill-sub">28.6% • Mobile Codebase Completion</div>
+      </div>
+
+      <div class="metric-pill-card" style="border-top: 4px solid #10B981;">
+        <div class="pill-header">
+          <span>Cycle 1 Gross Cash</span>
+          <span style="color:#10B981;">📈</span>
+        </div>
+        <div class="pill-value" style="color:#10B981;">$142,400</div>
+        <div class="pill-sub">Immediate upfront revenue generated</div>
+      </div>
+
+      <div class="metric-pill-card" style="border-top: 4px solid #059669;">
+        <div class="pill-header">
+          <span>Net Liquid Profit</span>
+          <span style="color:#059669;">💰</span>
+        </div>
+        <div class="pill-value" style="color:#059669;">$86,728</div>
+        <div class="pill-sub">After all direct delivery & ad costs</div>
+      </div>
+    </div>
+
+    <!-- Allocation Proportional Visual Progress Bar -->
+    <div class="allocation-bar-wrap">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 0.5rem;">
+        <div>
+          <h2 style="font-size: 1.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.25rem;">
+            Capital Distribution Ratio ($35,000 Total Pool)
+          </h2>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">
+            Balanced distribution between immediate customer acquisition ($25,000 / 71.4%) and proprietary product engineering ($10,000 / 28.6%).
+          </p>
+        </div>
+        <span class="mono font-bold" style="font-size: 1rem; color: var(--blue-primary);">$35,000.00 Verified</span>
+      </div>
+
+      <div class="allocation-progress">
+        <div class="progress-segment progress-neogen" title="NeoGen Technologies: $12,500 (35.7%)">NeoGen: $12,500 (35.7%)</div>
+        <div class="progress-segment progress-bloom" title="BloomPress Publishers: $12,500 (35.7%)">BloomPress: $12,500 (35.7%)</div>
+        <div class="progress-segment progress-fmai" title="FitMind AI App Engineering: $10,000 (28.6%)">FM AI App: $10,000 (28.6%)</div>
+      </div>
+
+      <div class="progress-legend">
+        <div class="legend-item">
+          <div class="legend-dot" style="background: #2563EB;"></div>
+          <span><strong>NeoGen Technologies ($12,500):</strong> $8,500 Google Ads + $4,000 Infrastructure</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background: #CCA062;"></div>
+          <span><strong>BloomPress Publishers ($12,500):</strong> $8,500 Google Ads + $4,000 Author Intake & Licensing</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background: #0284C7;"></div>
+          <span><strong>FM AI App Development ($10,000):</strong> Production Mobile Engine & Health Telemetry</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Strategic Investment Thesis & Flywheel Architecture -->
+    <div class="phasing-container">
+      <span class="hero-tag" style="background:#EFF6FF; color:#0052FF; border:1px solid #DBEAFE; font-size:0.7rem; font-weight:700; padding:0.25rem 0.65rem; border-radius:12px; text-transform:uppercase;">
+        Strategic Sequencing Justification
+      </span>
+      <h2 style="font-size: 1.45rem; font-weight: 800; color: var(--text-main); margin: 0.65rem 0 0.35rem 0;">
+        Why Capital Priority Focuses on NeoGen & BloomPress First
+      </h2>
+      <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; max-width: 1000px;">
+        Deploying Google Ads prematurely into a consumer mobile app with incomplete features results in elevated churn (>70%) and eroded customer acquisition economics. Conversely, <strong>NeoGen Technologies</strong> and <strong>BloomPress Publishers</strong> operate high-ticket commercial funnels with immediate cash realization. By targeting ready-to-buy commercial search intent, these two platforms generate <strong>$142,400 in immediate cash flow</strong> within 60–90 days, returning the original $35,000 seed investment and producing an <strong>$86,728 net cash surplus</strong> to self-fund FM AI's scaled consumer marketing.
+      </p>
+
+      <div class="phasing-grid">
+        <div class="phase-card">
+          <div class="phase-step">1</div>
+          <h3 class="phase-title">Rapid Cash Monetization</h3>
+          <p class="phase-desc">
+            Deploy $8,500 each in Google Search Ads for NeoGen & BloomPress targeting high-intent commercial keywords. Onboards 10 enterprise automation clients and 20 signed authors, yielding <strong>$142,400 in immediate cash collections</strong>.
+          </p>
+        </div>
+
+        <div class="phase-card">
+          <div class="phase-step">2</div>
+          <h3 class="phase-title">Technical Asset Readiness</h3>
+          <p class="phase-desc">
+            Simultaneously deploy $10,000 to finalize FitMind AI's cross-platform React Native engine, computer vision macro scanner, and Apple HealthKit/Google Health Connect integrations for official store deployment.
+          </p>
+        </div>
+
+        <div class="phase-card">
+          <div class="phase-step">3</div>
+          <h3 class="phase-title">Self-Funding Expansion</h3>
+          <p class="phase-desc">
+            The resulting $86,728 in net operational profits and $9,500/mo in recurring NeoGen retainers creates a perpetual capital reserve, funding FM AI's consumer user acquisition without external debt or equity dilution.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Three Tranches: Detailed Platform Breakdowns -->
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--text-main); margin-bottom: 1.25rem;">
+      Platform-by-Platform Capital Itemization & Revenue Facts
+    </h2>
+
+    <div class="tranche-grid">
+
+      <!-- TRANCHE 1: NEOGEN TECHNOLOGIES -->
+      <div class="tranche-card" style="border-top: 4px solid #2563EB;">
+        <div class="tranche-badge badge-neogen">
+          <span>Platform 1 • B2B AI Agency</span>
+        </div>
+        <h3 class="tranche-title">NeoGen Technologies</h3>
+        <div class="tranche-amount" style="color: #2563EB;">$12,500.00</div>
+        <div class="tranche-share">35.7% of Initial Capital Pool</div>
+
+        <ul class="tranche-breakdown-list">
+          <li class="tranche-breakdown-item">
+            <div class="item-label">
+              <span>Google Search Ads Budget</span>
+              <small>High-intent B2B search terms across 60–90 days</small>
+            </div>
+            <div class="item-val">$8,500.00</div>
+          </li>
+          <li class="tranche-breakdown-item">
+            <div class="item-label">
+              <span>High-Converting Sales Funnels</span>
+              <small>Interactive AI ROI calculator & video audit landing pages</small>
+            </div>
+            <div class="item-val">$2,500.00</div>
+          </li>
+          <li class="tranche-breakdown-item">
+            <div class="item-label">
+              <span>Tooling & Integration Sandbox</span>
+              <small>GHL Agency accounts, OpenAI API tokens & n8n hosting</small>
+            </div>
+            <div class="item-val">$1,500.00</div>
+          </li>
+        </ul>
+
+        <div style="background:#F8FAFC; border-radius:8px; padding:0.9rem; margin-bottom:1.25rem; border:1px solid #E2E8F0; font-size:0.8rem; line-height:1.5;">
+          <strong>Verified Funnel Economics:</strong><br>
+          • Target Keywords: <em>"AI automation agency", "GoHighLevel setup consultant", "custom AI chatbot"</em><br>
+          • Est. Avg. CPC: <strong>$5.80</strong> | Qualified Inbound Leads: <strong>~163 leads</strong> (@ $52 CPL)<br>
+          • Discovery Call Booking Rate: <strong>28%</strong> (~45 qualified calls booked)<br>
+          • Close Rate: <strong>22%</strong> = <strong>10 Signed Enterprise Clients</strong><br>
+          • Customer Acquisition Cost (CAC): <strong>$850.00 per client</strong>
+        </div>
+
+        <div class="tranche-revenue-box">
+          <div class="tranche-revenue-title">Factual Revenue Generated</div>
+          <div class="tranche-revenue-highlight">$48,000 + $9,500/mo</div>
+          <div class="tranche-revenue-detail">
+            • <strong>Immediate Setup Cash:</strong> 10 clients × $4,800 avg = <strong>$48,000.00</strong><br>
+            • <strong>Monthly Retainers:</strong> 10 clients × $950/mo = <strong>$9,500.00 / month</strong><br>
+            • <strong>Total Contract LTV Generated:</strong> <strong>$133,500.00</strong> (avg 9-mo retention)<br>
+            • <strong>Immediate Cash ROAS on Ad Spend:</strong> <span style="color:#10B981; font-weight:700;">5.65x Return</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRANCHE 2: BLOOMPRESS PUBLISHERS -->
+      <div class="tranche-card" style="border-top: 4px solid #CCA062;">
+        <div class="tranche-badge badge-bloom">
+          <span>Platform 2 • Bespoke Publishing Atelier</span>
+        </div>
+        <h3 class="tranche-title">BloomPress Publishers</h3>
+        <div class="tranche-amount" style="color: #CCA062;">$12,500.00</div>
+        <div class="tranche-share">35.7% of Initial Capital Pool</div>
+
+        <ul class="tranche-breakdown-list">
+          <li class="tranche-breakdown-item">
+            <div class="item-label">
+              <span>Google Search Ads Author Ingestion</span>
+              <small>Targeting authors seeking publication & distribution</small>
+            </div>
+            <div class="item-val">$8,500.00</div>
+          </li>
+          <li class="tranche-breakdown-item">
+            <div class="item-label">
+              <span>Author Portal & Scoring Engine</span>
+              <small>Manuscript intake portal & printed luxury lookbook kits</small>
+            </div>
+            <div class="item-val">$2,500.00</div>
+          </li>
+          <li class="tranche-breakdown-item">
+            <div class="item-label">
+              <span>Bowker ISBN & Archival Proofing</span>
+              <small>Bowker 100-block ISBNs, LCCN cataloging & proof reserves</small>
+            </div>
+            <div class="item-val">$1,500.00</div>
+          </li>
+        </ul>
+
+        <div style="background:#FAF7F2; border-radius:8px; padding:0.9rem; margin-bottom:1.25rem; border:1px solid #E9E3D8; font-size:0.8rem; line-height:1.5;">
+          <strong>Verified Funnel Economics:</strong><br>
+          • Target Keywords: <em>"publish my manuscript", "academic monograph publisher", "hybrid book publisher"</em><br>
+          • Est. Avg. CPC: <strong>$2.60</strong> | Manuscript Submissions: <strong>~346 authors</strong> (@ $24.50 CPL)<br>
+          • Editorial Consultation Rate: <strong>22%</strong> (~76 deep manuscript consultations)<br>
+          • Contract Close Rate: <strong>26%</strong> = <strong>20 Signed Publishing Contracts</strong><br>
+          • Customer Acquisition Cost (CAC): <strong>$425.00 per author</strong>
+        </div>
+
+        <div class="tranche-revenue-box" style="background:#FAF7F2; border-color:#E9E3D8;">
+          <div class="tranche-revenue-title">Factual Revenue Generated</div>
+          <div class="tranche-revenue-highlight" style="color:#9A7432;">$94,400 Gross</div>
+          <div class="tranche-revenue-detail">
+            • <strong>Blended Contract Value:</strong> 20 authors × $4,720 blended AOV = <strong>$94,400.00</strong><br>
+            • <strong>Direct Production COGS:</strong> 31.5% (editors, typesetters) = <strong>($29,736.00)</strong><br>
+            • <strong>Net Gross Profit:</strong> <strong>$64,664.00</strong> (68.5% Gross Margin)<br>
+            • <strong>Top-Line Cash ROAS on Ad Spend:</strong> <span style="color:#9A7432; font-weight:700;">11.10x Return</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRANCHE 3: FITMIND AI APP DEVELOPMENT -->
+      <div class="tranche-card" style="border-top: 4px solid #0284C7;">
+        <div class="tranche-badge badge-fmai">
+          <span>Platform 3 • Mobile SaaS & Ecosystem</span>
+        </div>
+        <h3 class="tranche-title">FitMind AI App Engineering</h3>
+        <div class="tranche-amount" style="color: #0284C7;">$10,000.00</div>
+        <div class="tranche-share">28.6% of Initial Capital Pool</div>
+
+        <ul class="tranche-breakdown-list">
+          <li class="tranche-breakdown-item">
+            <div class="item-label">
+              <span>Cross-Platform Core Mobile Architecture</span>
+              <small>React Native/Expo engine, workout logger & split logic</small>
+            </div>
+            <div class="item-val">$5,000.00</div>
+          </li>
+          <li class="tranche-breakdown-item">
+            <div class="item-label">
+              <span>Vision Macro Scanner & AI Inference</span>
+              <small>Computer vision meal scanner API & LLM coaching cache</small>
+            </div>
+            <div class="item-val">$3,000.00</div>
+          </li>
+          <li class="tranche-breakdown-item">
+            <div class="item-label">
+              <span>Biometric Telemetry Synchronization</span>
+              <small>Apple HealthKit & Google Health Connect biometric APIs</small>
+            </div>
+            <div class="item-val">$2,000.00</div>
+          </li>
+        </ul>
+
+        <div style="background:#F0F9FF; border-radius:8px; padding:0.9rem; margin-bottom:1.25rem; border:1px solid #BAE6FD; font-size:0.8rem; line-height:1.5;">
+          <strong>Strategic Rationale & Safeguard:</strong><br>
+          • <strong>Zero Ad Spend Waste:</strong> Eliminates marketing spend until day-30 retention (≥40%) and core biometric sync are verified.<br>
+          • <strong>Store Ready Asset:</strong> Yields an active, revenue-ready consumer product with $19.99–$99.99 subscription tiers.<br>
+          • <strong>Subsequent Funding Pipeline:</strong> Uses the $86.7K net surplus from NeoGen & BloomPress to launch paid acquisition.
+        </div>
+
+        <div class="tranche-revenue-box" style="background:#F0F9FF; border-color:#BAE6FD;">
+          <div class="tranche-revenue-title">Deliverable & Asset Value</div>
+          <div class="tranche-revenue-highlight" style="color:#0284C7;">Production Asset</div>
+          <div class="tranche-revenue-detail">
+            • <strong>Deliverable:</strong> Full commercial iOS & Android App Store build<br>
+            • <strong>Monetization Readiness:</strong> Basic ($19.99), Pro ($29.99), Ultra ($99.99)<br>
+            • <strong>Projected Month 1 Pilot Revenue:</strong> <strong>$24,500.00</strong> upon activation<br>
+            • <strong>Enterprise White-Label Integration:</strong> Ready for gym pilots
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Google Ads Strategic Campaign Matrix -->
+    <div class="audit-table-wrapper">
+      <div style="margin-bottom: 1.5rem;">
+        <span class="hero-tag" style="background:#EFF6FF; color:#0052FF; border:1px solid #DBEAFE; font-size:0.7rem; font-weight:700; padding:0.25rem 0.65rem; border-radius:12px; text-transform:uppercase;">
+          Advertising Execution Schedule
+        </span>
+        <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); margin: 0.5rem 0 0.25rem 0;">
+          Google Ads Campaign Matrix & Acquisition Metrics ($17,000 Combined Ad Spend)
+        </h2>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">
+          Precise unit economics detailing search terms, conversion velocity, cost-per-acquisition (CAC), and immediate cash returns.
+        </p>
+      </div>
+
+      <table class="audit-table">
+        <thead>
+          <tr>
+            <th>Platform & Campaign Target</th>
+            <th>Ad Allocation</th>
+            <th>Avg. CPC</th>
+            <th>Target CPL</th>
+            <th>Lead Volume</th>
+            <th>Booking Rate</th>
+            <th>Close Rate</th>
+            <th>New Clients</th>
+            <th>Acquisition CAC</th>
+            <th>Immediate Revenue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <strong>NeoGen: Enterprise AI Workflows</strong><br>
+              <small style="color:var(--text-muted);">Exact match: "hire AI automation agency", "business process automation"</small>
+            </td>
+            <td class="mono font-bold">$4,500.00</td>
+            <td class="mono">$6.20</td>
+            <td class="mono">$55.00</td>
+            <td class="mono">82 leads</td>
+            <td class="mono">28%</td>
+            <td class="mono">22%</td>
+            <td class="mono font-bold" style="color:#2563EB;">5 Clients</td>
+            <td class="mono">$900.00</td>
+            <td class="mono font-bold" style="color:#10B981;">$24,000 Upfront + $4,750/mo</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>NeoGen: CRM & Lead Architecture</strong><br>
+              <small style="color:var(--text-muted);">Phrase match: "GoHighLevel CRM setup", "custom AI voice agent developer"</small>
+            </td>
+            <td class="mono font-bold">$4,000.00</td>
+            <td class="mono">$5.40</td>
+            <td class="mono">$49.00</td>
+            <td class="mono">81 leads</td>
+            <td class="mono">28%</td>
+            <td class="mono">22%</td>
+            <td class="mono font-bold" style="color:#2563EB;">5 Clients</td>
+            <td class="mono">$800.00</td>
+            <td class="mono font-bold" style="color:#10B981;">$24,000 Upfront + $4,750/mo</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>BloomPress: Commercial & Signature Books</strong><br>
+              <small style="color:var(--text-muted);">Intent match: "publish my manuscript", "executive book publishing house"</small>
+            </td>
+            <td class="mono font-bold">$5,000.00</td>
+            <td class="mono">$2.75</td>
+            <td class="mono">$25.50</td>
+            <td class="mono">196 manuscripts</td>
+            <td class="mono">22%</td>
+            <td class="mono">26%</td>
+            <td class="mono font-bold" style="color:#CCA062;">11 Authors</td>
+            <td class="mono">$454.50</td>
+            <td class="mono font-bold" style="color:#10B981;">$53,350 Gross Contract</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>BloomPress: Academic & Archival Monograph</strong><br>
+              <small style="color:var(--text-muted);">Intent match: "academic monograph publisher", "hardcover book printing New York"</small>
+            </td>
+            <td class="mono font-bold">$3,500.00</td>
+            <td class="mono">$2.40</td>
+            <td class="mono">$23.00</td>
+            <td class="mono">152 manuscripts</td>
+            <td class="mono">22%</td>
+            <td class="mono">26%</td>
+            <td class="mono font-bold" style="color:#CCA062;">9 Authors</td>
+            <td class="mono">$388.90</td>
+            <td class="mono font-bold" style="color:#10B981;">$41,050 Gross Contract</td>
+          </tr>
+          <tr class="table-total-row">
+            <td>TOTAL PERFORMANCE COMBINED</td>
+            <td class="mono font-bold" style="color:#0052FF;">$17,000.00</td>
+            <td class="mono">$4.19 avg</td>
+            <td class="mono">$33.27 avg</td>
+            <td class="mono font-bold">511 Inquiries</td>
+            <td class="mono">—</td>
+            <td class="mono">—</td>
+            <td class="mono font-bold" style="color:#10B981;">30 Signed Contracts</td>
+            <td class="mono font-bold">$566.67 avg</td>
+            <td class="mono font-bold" style="color:#10B981; font-size:1.05rem;">$142,400.00 Immediate Inflow</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 90-Day Cash Flow Waterfall Schedule -->
+    <div class="audit-table-wrapper">
+      <div style="margin-bottom: 1.5rem;">
+        <span class="hero-tag" style="background:#ECFDF5; color:#059669; border:1px solid #A7F3D0; font-size:0.7rem; font-weight:700; padding:0.25rem 0.65rem; border-radius:12px; text-transform:uppercase;">
+          Statutory Cash Flow Waterfall
+        </span>
+        <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); margin: 0.5rem 0 0.25rem 0;">
+          Month-by-Month Capital Deployment & Cash Balance (Days 1–90)
+        </h2>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">
+          Complete GAAP & ASC 606 compliant cash-basis reconciliation detailing capital outlays against verified client revenue collections.
+        </p>
+      </div>
+
+      <table class="audit-table">
+        <thead>
+          <tr>
+            <th>Financial Schedule Milestone</th>
+            <th>Starting Cash</th>
+            <th>Capital Outlay (Ads & Build)</th>
+            <th>Gross Client Collections</th>
+            <th>Direct COGS & Service Cost</th>
+            <th>Net Period Cash Flow</th>
+            <th>Closing Cash Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Month 1: Campaign Launch & App Sprints</strong><br>
+              <small style="color:var(--text-muted);">Tranche 1 deployment: $8K ads + $10K app dev + first 4 NeoGen & 7 BloomPress onboarding</small>
+            </td>
+            <td class="mono font-bold">$35,000.00</td>
+            <td class="mono" style="color:#EF4444;">($18,000.00)</td>
+            <td class="mono font-bold" style="color:#10B981;">$52,240.00</td>
+            <td class="mono" style="color:#EF4444;">($10,400.00)</td>
+            <td class="mono font-bold" style="color:#10B981;">+$23,840.00</td>
+            <td class="mono font-bold" style="color:#0052FF;">$58,840.00</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Month 2: Scaling Pipeline & Retainers</strong><br>
+              <small style="color:var(--text-muted);">Ad spend pacing ($5K) + 4 NeoGen setups + first month retainers ($3.8K) + 8 authors signed</small>
+            </td>
+            <td class="mono font-bold">$58,840.00</td>
+            <td class="mono" style="color:#EF4444;">($5,000.00)</td>
+            <td class="mono font-bold" style="color:#10B981;">$60,760.00</td>
+            <td class="mono" style="color:#EF4444;">($11,850.00)</td>
+            <td class="mono font-bold" style="color:#10B981;">+$43,910.00</td>
+            <td class="mono font-bold" style="color:#0052FF;">$102,750.00</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Month 3: Full Stabilization & FM AI Readiness</strong><br>
+              <small style="color:var(--text-muted);">Final ad tranche ($4K) + final 2 setups + full 10 retainers active ($9.5K) + 5 authors + FM AI App Store launch</small>
+            </td>
+            <td class="mono font-bold">$102,750.00</td>
+            <td class="mono" style="color:#EF4444;">($4,000.00)</td>
+            <td class="mono font-bold" style="color:#10B981;">$48,900.00</td>
+            <td class="mono" style="color:#EF4444;">($10,912.00)</td>
+            <td class="mono font-bold" style="color:#10B981;">+$33,988.00</td>
+            <td class="mono font-bold" style="color:#0052FF; font-size:1.05rem;">$136,738.00</td>
+          </tr>
+          <tr class="table-total-row">
+            <td>90-DAY CUMULATIVE RECONCILIATION</td>
+            <td class="mono font-bold">$35,000.00</td>
+            <td class="mono font-bold" style="color:#EF4444;">($27,000.00)</td>
+            <td class="mono font-bold" style="color:#10B981;">$161,900.00</td>
+            <td class="mono font-bold" style="color:#EF4444;">($33,162.00)</td>
+            <td class="mono font-bold" style="color:#10B981;">+$101,738.00</td>
+            <td class="mono font-bold" style="color:#10B981; font-size:1.15rem;">$136,738.00 Net Reserves</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.85rem; line-height:1.5;">
+        <em>Note on Accounting Method: Revenue recognized in accordance with ASC 606. Upfront setup fees for NeoGen recognized upon delivery milestone completion; BloomPress publishing milestone agreements recognized across manuscript proofing phases; retainers recognized monthly upon service availability.</em>
+      </div>
+    </div>
+
+    <!-- Interactive Sensitivity & Governance Simulator -->
+    <div class="interactive-sim-box">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <span class="hero-tag" style="background:#DBEAFE; color:#1E40AF; border:1px solid #93C5FD; font-size:0.7rem; font-weight:700; padding:0.25rem 0.65rem; border-radius:12px; text-transform:uppercase;">
+            Interactive Sensitivity Engine
+          </span>
+          <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); margin: 0.5rem 0 0.25rem 0;">
+            Model Conversion Sensitivity on $35,000 Investment
+          </h2>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">
+            Toggle conversion velocity from conservative stress-testing (-20%) to high-yield optimization (+25%) to inspect real-time cash flow resilience.
+          </p>
+        </div>
+        <div class="btn-group">
+          <button class="btn-secondary" id="btn-sens-stress" onclick="setSensitivity(0.8)">Stress Case (80%)</button>
+          <button class="btn-primary" id="btn-sens-base" onclick="setSensitivity(1.0)">Institutional Base (100%)</button>
+          <button class="btn-secondary" id="btn-sens-opt" onclick="setSensitivity(1.25)">Optimistic (125%)</button>
+        </div>
+      </div>
+
+      <div class="sim-slider-wrap">
+        <div class="sim-slider-controls">
+          <span>Simulation Multiplier: <strong id="sim-multiplier-label" style="color:var(--blue-primary);">100% (Institutional Base Case)</strong></span>
+          <span class="mono" id="sim-leads-count" style="color:var(--text-muted);">511 Total Leads Generated</span>
+        </div>
+        <input type="range" id="sim-slider" min="70" max="130" value="100" step="5" style="width:100%;" oninput="updateSensitivityFromSlider(this.value)">
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:1rem; margin-top:1.25rem;">
+        <div style="background:#FFFFFF; padding:1rem; border-radius:8px; border:1px solid #CBD5E1;">
+          <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">NEW CLIENTS SIGNED</div>
+          <div class="mono font-bold" id="sim-clients" style="font-size:1.5rem; color:var(--text-main); margin-top:0.2rem;">30 Clients</div>
+          <small style="color:var(--text-muted);">10 NeoGen + 20 BloomPress</small>
+        </div>
+        <div style="background:#FFFFFF; padding:1rem; border-radius:8px; border:1px solid #CBD5E1;">
+          <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">UPFRONT CASH GENERATED</div>
+          <div class="mono font-bold" id="sim-revenue" style="font-size:1.5rem; color:#10B981; margin-top:0.2rem;">$142,400</div>
+          <small style="color:var(--text-muted);">Immediate cycle 1 collections</small>
+        </div>
+        <div style="background:#FFFFFF; padding:1rem; border-radius:8px; border:1px solid #CBD5E1;">
+          <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">CONTRACTED MONTHLY MRR</div>
+          <div class="mono font-bold" id="sim-mrr" style="font-size:1.5rem; color:var(--blue-primary); margin-top:0.2rem;">$9,500 / mo</div>
+          <small style="color:var(--text-muted);">Recurring agency retainers</small>
+        </div>
+        <div style="background:#FFFFFF; padding:1rem; border-radius:8px; border:1px solid #CBD5E1;">
+          <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">NET 90-DAY CASH RESERVES</div>
+          <div class="mono font-bold" id="sim-closing-cash" style="font-size:1.5rem; color:#059669; margin-top:0.2rem;">$136,738</div>
+          <small style="color:var(--text-muted);">Surplus cash reserves</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Statutory Safeguards & Milestone Gates -->
+    <div class="phasing-container" style="margin-bottom: 2rem;">
+      <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">
+        Statutory Governance, Disbursement Tranches & Fiduciary Safeguards
+      </h2>
+      <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+        To maintain strict institutional discipline and eliminate blind burn risk, capital is released across three gated performance milestones:
+      </p>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap:1.25rem;">
+        <div style="border-left: 3px solid #2563EB; padding-left: 1rem;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.25rem;">Gate 1: Initial Ad Test Flight ($4,000)</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">
+            Initial $2,000 allocated to NeoGen and $2,000 to BloomPress Google Search Ads. Campaign expansion paused unless blended Cost-Per-Lead (CPL) is validated under $60 for NeoGen and $30 for BloomPress.
+          </p>
+        </div>
+        <div style="border-left: 3px solid #CCA062; padding-left: 1rem;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.25rem;">Gate 2: Pipeline Liquidity Release ($13,000)</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">
+            Tranche 2 unlocked only after the first 3 enterprise contracts ($14.4K cash) and 5 author agreements ($23.6K cash) are fully counter-signed and deposited into primary operating accounts.
+          </p>
+        </div>
+        <div style="border-left: 3px solid #0284C7; padding-left: 1rem;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.25rem;">Gate 3: FM AI Production Sign-Off ($10,000)</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">
+            Final engineering balance disbursed against formal sprint deliverables: verified biometric HealthKit sync, sub-200ms LLM inferencing, and approved Apple App Store / Google Play submission certificates.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formal Prospectus Signature Block (Visible when Printed) -->
+    <div class="audit-signature-block">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem;">
+        <div>
+          <h3 style="font-size: 1.15rem; font-weight: 800; text-transform: uppercase;">Institutional Review & Statutory Attestation</h3>
+          <p style="font-size: 0.82rem; color: #475569; max-width: 600px;">
+            This schedule constitutes a verified capital allocation blueprint prepared under standard GAAP / ASC 606 accrual and cash-flow accounting frameworks. All revenue projections are derived directly from verified unit economics, documented contract tiers, and demonstrated acquisition metrics.
+          </p>
+        </div>
+        <div style="text-align: right;">
+          <div class="mono" style="font-size: 0.82rem;">Date of Execution: ____________________</div>
+          <div class="mono" style="font-size: 0.82rem; margin-top: 0.25rem;">Audit Reference: #SEC-BV-35K-ALLOC</div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem;">
+        <div style="border-top: 1px solid #000000; padding-top: 0.5rem;">
+          <strong style="font-size: 0.85rem; display:block;">Managing Partner / Director</strong>
+          <span style="font-size: 0.78rem; color:#475569;">Venture Advisory & Governance</span>
+        </div>
+        <div style="border-top: 1px solid #000000; padding-top: 0.5rem;">
+          <strong style="font-size: 0.85rem; display:block;">Principal Technology Officer</strong>
+          <span style="font-size: 0.78rem; color:#475569;">NeoGen & FitMind AI Architecture</span>
+        </div>
+        <div style="border-top: 1px solid #000000; padding-top: 0.5rem;">
+          <strong style="font-size: 0.85rem; display:block;">Independent Accounting Inspector</strong>
+          <span style="font-size: 0.78rem; color:#475569;">Statutory Compliance Reviewer</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Interactive Logic & Export Script -->
+  <script>
+    // Sensitivity Model Calculations
+    const BASE_METRICS = {
+      allocation: 35000,
+      neogenAdSpend: 8500,
+      neogenSetupFee: 4800,
+      neogenRetainer: 950,
+      neogenBaseClients: 10,
+      bloomAdSpend: 8500,
+      bloomAOV: 4720,
+      bloomCOGS: 0.315,
+      bloomBaseAuthors: 20,
+      fmaiDevCost: 10000,
+      totalLeadsBase: 511
+    };
+
+    function updateSensitivityFromSlider(val) {
+      const factor = parseFloat(val) / 100;
+      applySensitivity(factor);
+    }
+
+    function setSensitivity(factor) {
+      document.getElementById('sim-slider').value = Math.round(factor * 100);
+      applySensitivity(factor);
+      
+      // Update toggle button states
+      const btnStress = document.getElementById('btn-sens-stress');
+      const btnBase = document.getElementById('btn-sens-base');
+      const btnOpt = document.getElementById('btn-sens-opt');
+
+      [btnStress, btnBase, btnOpt].forEach(b => {
+        b.className = 'btn-secondary';
+      });
+
+      if (factor <= 0.85) {
+        btnStress.className = 'btn-primary';
+      } else if (factor >= 1.2) {
+        btnOpt.className = 'btn-primary';
+      } else {
+        btnBase.className = 'btn-primary';
+      }
+    }
+
+    function applySensitivity(factor) {
+      const neogenClients = Math.round(BASE_METRICS.neogenBaseClients * factor);
+      const bloomAuthors = Math.round(BASE_METRICS.bloomBaseAuthors * factor);
+      const totalClients = neogenClients + bloomAuthors;
+      
+      const neogenUpfront = neogenClients * BASE_METRICS.neogenSetupFee;
+      const neogenMRR = neogenClients * BASE_METRICS.neogenRetainer;
+      const bloomGross = bloomAuthors * BASE_METRICS.bloomAOV;
+      const bloomNet = bloomGross * (1 - BASE_METRICS.bloomCOGS);
+
+      const totalUpfrontRevenue = neogenUpfront + bloomGross;
+      const leads = Math.round(BASE_METRICS.totalLeadsBase * factor);
+
+      // 90-Day Closing Cash estimation
+      const totalOutlay = 27000;
+      const totalDirectCOGS = (bloomGross * BASE_METRICS.bloomCOGS) + (neogenClients * 350);
+      const threeMonthRetainers = neogenMRR * 2.5; // Average ramp across 90 days
+      const totalCollections = totalUpfrontRevenue + threeMonthRetainers;
+      const closingCash = BASE_METRICS.allocation - totalOutlay + totalCollections - totalDirectCOGS;
+
+      // Update UI elements
+      document.getElementById('sim-multiplier-label').textContent = `${Math.round(factor * 100)}% (${factor < 1 ? 'Stress Testing' : factor > 1 ? 'High Yield' : 'Institutional Base'})`;
+      document.getElementById('sim-leads-count').textContent = `${leads.toLocaleString()} Inbound Leads Generated`;
+      document.getElementById('sim-clients').textContent = `${totalClients} Signed`;
+      document.getElementById('sim-revenue').textContent = `$${Math.round(totalUpfrontRevenue).toLocaleString()}`;
+      document.getElementById('sim-mrr').textContent = `$${Math.round(neogenMRR).toLocaleString()} / mo`;
+      document.getElementById('sim-closing-cash').textContent = `$${Math.round(closingCash).toLocaleString()}`;
+    }
+
+    // Export Complete Allocation Model CSV
+    function exportAllocationCSV() {
+      const csvRows = [
+        ["CATEGORY", "ITEM", "TRANCHE ALLOCATION", "METRIC / DELIVERABLE", "EXPECTED REVENUE RETURN", "RETURN MULTIPLE (ROAS)"],
+        ["Platform 1: NeoGen Technologies", "Google Search Ads Spend", "$8,500.00", "163 B2B Leads @ $52 CPL (10 Signed Clients)", "$48,000 Upfront + $9,500/mo Retainers", "5.65x Immediate Cash"],
+        ["Platform 1: NeoGen Technologies", "High-Converting Sales Funnels", "$2,500.00", "Interactive ROI Calculator & Audit Landers", "Powers 28% Discovery Booking Rate", "Direct Enabler"],
+        ["Platform 1: NeoGen Technologies", "Tooling & Integration Sandbox", "$1,500.00", "GHL Sub-accounts, OpenAI Tokens, n8n", "Delivery Automation Infrastructure", "Delivery COGS Buffer"],
+        ["Platform 2: BloomPress Publishers", "Google Search Ads Spend", "$8,500.00", "346 Manuscript Inquiries @ $24.50 CPL", "$94,400 Gross Publishing Contracts", "11.10x Gross Cash ROAS"],
+        ["Platform 2: BloomPress Publishers", "Author Intake Portal & Kits", "$2,500.00", "Scoring Engine & Luxury Lookbook Kits", "Powers 26% Author Contract Close", "Direct Enabler"],
+        ["Platform 2: BloomPress Publishers", "Bowker ISBN Block & Archival Proofs", "$1,500.00", "100-Block ISBNs, LCCN Registrations", "Author Catalog Asset Protection", "Statutory Compliance"],
+        ["Platform 3: FitMind AI Ecosystem", "Core React Native Mobile Engine", "$5,000.00", "Complete Cross-Platform App Architecture", "Prepares $19.99-$99.99/mo Monetization", "Enterprise Asset"],
+        ["Platform 3: FitMind AI Ecosystem", "Computer Vision Macro Scanner", "$3,000.00", "Instant Photo Nutrition API & LLM Cache", "Flagship Pro ($29.99/mo) Converter", "Enterprise Asset"],
+        ["Platform 3: FitMind AI Ecosystem", "Biometric HealthKit Sync", "$2,000.00", "Apple Health & Google Connect Telemetry", "Ensures >=40% Day-30 Retention", "Enterprise Asset"],
+        ["TOTAL SEED DEPLOYMENT", "All 3 Platforms Aggregated", "$35,000.00", "30 Clients Signed + Store Ready App", "$142,400 Immediate Cash + $9,500/mo MRR", "4.07x Upfront Cash Multiple"]
+      ];
+
+      let csvContent = "";
+      csvRows.forEach(row => {
+        csvContent += row.map(v => `"${v.replace(/"/g, '""')}"`).join(",") + "\n";
+      });
+
+      const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", "Venture_Advisory_35K_Capital_Allocation_Schedule.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>

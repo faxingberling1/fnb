@@ -70,6 +70,13 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  // API Route: Seed Capital Allocation Schedule ($35,000)
+  if (pathname === "/api/seed-allocation") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify(VENTURE_DATA.seedAllocation || {}, null, 2));
+    return;
+  }
+
   // API Route: Export Financial CSV
   if (pathname === "/api/export/csv") {
     const data = VENTURE_DATA.consolidated ? VENTURE_DATA.consolidated.timeframes : [];

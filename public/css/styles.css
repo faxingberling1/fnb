@@ -92,6 +92,10 @@ code, .font-mono {
   font-family: 'JetBrains Mono', monospace;
 }
 
+button, input, select, textarea {
+  font-family: inherit;
+}
+
 /* ==========================================================================
    NAVIGATION BAR
    ========================================================================== */
@@ -1780,24 +1784,64 @@ input[type="range"] {
   flex-wrap: wrap;
 }
 
+.btn-primary {
+  background: var(--blue-primary);
+  border: 1px solid var(--blue-primary);
+  color: #FFFFFF;
+  padding: 0.6rem 1.25rem;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 14px rgba(0, 82, 255, 0.25);
+  transition: var(--transition);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background: var(--blue-hover);
+  border-color: var(--blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 82, 255, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
 .btn-secondary {
   background: #FFFFFF;
   border: 1px solid var(--border-color);
   color: var(--text-main);
   padding: 0.6rem 1.25rem;
   border-radius: 9px;
+  font-family: inherit;
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   transition: var(--transition);
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .btn-secondary:hover {
   background: var(--bg-subtle);
   border-color: var(--text-muted);
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
 }
 
 /* ==========================================================================
