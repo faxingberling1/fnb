@@ -874,6 +874,88 @@ const VENTURE_DATA = {
       netLiquidProfitGenerated: 86728,
       netLiquidSurplusPercentage: "147.8% surplus over initial capital",
       upfrontCashMultiple: "4.07x on $35k initial seed"
+    },
+    quarterlyBonusAllocation: {
+      taxReserveRate: 0.30,
+      postTaxRetentionRate: 0.70,
+      defaultBonusShareRate: 0.15,
+      accountingPolicy: "GAAP / ASC 606 Post-Tax Distribution Rule: External partner quarterly bonuses are strictly prohibited from being paid out of pre-tax gross revenue. Every venture first deducts direct delivery costs, ad spend, and operating expenses to establish Pre-Tax Net Profit, then ring-fences a 30% Statutory LLC Tax Reserve before computing Post-Tax Distributable Net Profit (70%).",
+      options: {
+        neogen: {
+          optionLabel: "Option 1: NeoGen Technologies Only",
+          capitalRequired: 12500,
+          quarterlyRevenue: 154800,
+          quarterlyCosts: 45500,
+          preTaxQuarterlyProfit: 109300,
+          taxReserve30Pct: 32790,
+          postTaxQuarterlyProfit: 76510,
+          preTaxMargin: "70.6%",
+          postTaxMargin: "49.4%",
+          validatedDrivers: "18 new B2B clients/qtr + 32 active retainers @ $950/mo; $850 CAC, $4,800 avg setup, 9-mo avg lifespan"
+        },
+        bloom: {
+          optionLabel: "Option 2: BloomPress Publishers Only",
+          capitalRequired: 12500,
+          quarterlyRevenue: 179360,
+          quarterlyCosts: 85365,
+          preTaxQuarterlyProfit: 93995,
+          taxReserve30Pct: 28198.5,
+          postTaxQuarterlyProfit: 65796.5,
+          preTaxMargin: "52.4%",
+          postTaxMargin: "36.7%",
+          validatedDrivers: "38 signed publishing titles/qtr @ $4,720 blended AOV; $425 CAC, 31.5% direct editorial/production COGS"
+        },
+        fmai: {
+          optionLabel: "Option 3: FitMind AI Only",
+          capitalRequired: 10000,
+          baseCase: {
+            modeLabel: "Institutional Base (M6 Stabilized 25K MAU × 3)",
+            quarterlyRevenue: 105000,
+            quarterlyCosts: 63600,
+            preTaxQuarterlyProfit: 41400,
+            taxReserve30Pct: 12420,
+            postTaxQuarterlyProfit: 28980,
+            preTaxMargin: "39.4%",
+            postTaxMargin: "27.6%"
+          },
+          growthRamp: {
+            modeLabel: "Target Growth Ramp (M6 Optimistic 50K MAU × 3)",
+            quarterlyRevenue: 590400,
+            quarterlyCosts: 217200,
+            preTaxQuarterlyProfit: 373200,
+            taxReserve30Pct: 111960,
+            postTaxQuarterlyProfit: 261240,
+            preTaxMargin: "63.2%",
+            postTaxMargin: "44.2%"
+          },
+          validatedDrivers: "$19.99 Basic / $29.99 Pro / $99.99 Ultra tiers + AdMob + B2B Gym Enterprise; standalone $10K funds store-ready mobile build (Q1 build/pilot; requires separate ad budget unless paired with NeoGen & BloomPress cash flywheel)"
+        },
+        allVentures: {
+          optionLabel: "Option 4: Full Portfolio (All 3 Ventures)",
+          capitalRequired: 35000,
+          baseCase: {
+            modeLabel: "Institutional Base — Conservative CPA View",
+            quarterlyRevenue: 439160,
+            quarterlyCosts: 194465,
+            preTaxQuarterlyProfit: 244695,
+            taxReserve30Pct: 73408.5,
+            postTaxQuarterlyProfit: 171286.5,
+            preTaxMargin: "55.7%",
+            postTaxMargin: "39.0%"
+          },
+          growthRamp: {
+            modeLabel: "Consolidated Q2/Q3 Portfolio Model",
+            quarterlyRevenue: 924560,
+            quarterlyCosts: 315600,
+            preTaxQuarterlyProfit: 608960,
+            taxReserve30Pct: 182688,
+            postTaxQuarterlyProfit: 426272,
+            preTaxMargin: "65.9%",
+            postTaxMargin: "46.1%"
+          },
+          flywheelAdvantage: "NeoGen & BloomPress generate $142,400 Cycle 1 cash ($86,728 net surplus) to self-fund FitMind AI consumer acquisition without further outside capital, while diversifying quarterly bonus distributions across B2B agency retainers, bespoke publishing, and recurring SaaS."
+        }
+      }
     }
   }
 };

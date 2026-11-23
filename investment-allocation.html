@@ -403,12 +403,186 @@
       page-break-inside: avoid;
     }
 
+    /* Post-Tax Quarterly Bonus Allocation Section */
+    .bonus-section-wrap {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 2.5rem;
+    }
+    .bonus-policy-banner {
+      background: linear-gradient(135deg, #F8FAFC 0%, #ECFDF5 100%);
+      border: 1px solid #A7F3D0;
+      border-left: 4px solid #059669;
+      border-radius: var(--radius-md);
+      padding: 1.15rem 1.35rem;
+      margin: 1.25rem 0 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .bonus-policy-banner p {
+      margin: 0;
+      font-size: 0.86rem;
+      color: var(--text-main);
+      line-height: 1.55;
+      max-width: 920px;
+    }
+    .bonus-tax-pill {
+      background: #065F46;
+      color: #FFFFFF;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .bonus-controls-bar {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.75rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      align-items: center;
+    }
+    .bonus-control-group label {
+      display: block;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .bonus-btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .bonus-scenario-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.35rem;
+      margin-bottom: 2rem;
+    }
+    .bonus-scenario-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition);
+    }
+    .bonus-scenario-card:hover {
+      box-shadow: var(--shadow-hover);
+    }
+    .bonus-scenario-card.featured-all {
+      border: 2px solid #0052FF;
+      background: linear-gradient(180deg, #F8FBFF 0%, #FFFFFF 35%);
+    }
+    .bonus-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.65rem;
+    }
+    .bonus-seed-chip {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      background: #F1F5F9;
+      color: var(--text-main);
+      border: 1px solid #CBD5E1;
+      white-space: nowrap;
+    }
+    .bonus-waterfall-mini {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1rem;
+      margin: 0.85rem 0 1rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      font-size: 0.83rem;
+    }
+    .bw-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .bw-row.bw-tax {
+      color: #B91C1C;
+    }
+    .bw-row.bw-post {
+      padding-top: 0.4rem;
+      border-top: 1px dashed #CBD5E1;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .bw-row.bw-bonus {
+      padding-top: 0.45rem;
+      margin-top: 0.15rem;
+      border-top: 2px solid #CBD5E1;
+      font-weight: 800;
+      font-size: 0.92rem;
+      color: #059669;
+    }
+    .bonus-horizon-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+    .bonus-horizon-pill {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 0.55rem 0.75rem;
+    }
+    .bonus-horizon-pill span {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .bonus-horizon-pill strong {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.98rem;
+      color: var(--text-main);
+    }
+    .bonus-driver-note {
+      margin-top: auto;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.48;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-color);
+    }
+
     @media print {
       body {
         background: #FFFFFF !important;
         color: #000000 !important;
       }
-      .top-nav, .financial-ticker-bar, .nav-actions, .btn-group, .interactive-sim-box {
+      .top-nav, .financial-ticker-bar, .nav-actions, .btn-group, .interactive-sim-box, .bonus-controls-bar {
         display: none !important;
       }
       .allocation-hero {
@@ -424,7 +598,7 @@
       .audit-signature-block {
         display: block !important;
       }
-      .metric-pill-card, .tranche-card, .allocation-bar-wrap, .audit-table-wrapper, .phasing-container {
+      .metric-pill-card, .tranche-card, .allocation-bar-wrap, .audit-table-wrapper, .phasing-container, .bonus-section-wrap, .bonus-scenario-card {
         box-shadow: none !important;
         border: 1px solid #CCCCCC !important;
         page-break-inside: avoid;
@@ -998,6 +1172,267 @@
       </div>
     </div>
 
+    <!-- Post-Tax Quarterly Bonus Allocation & Participation Scenarios (Each vs. All) -->
+    <section id="quarterly-bonus-allocation" class="bonus-section-wrap">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <span class="hero-tag" style="background:#ECFDF5; color:#059669; border:1px solid #A7F3D0; font-size:0.7rem; font-weight:700; padding:0.25rem 0.65rem; border-radius:12px; text-transform:uppercase;">
+            CPA-Ready Post-Tax Distribution Schedule
+          </span>
+          <h2 style="font-size: 1.45rem; font-weight: 800; color: var(--text-main); margin: 0.5rem 0 0.25rem 0;">
+            Estimated Quarterly Bonus Allocation: Standalone vs. Full Portfolio
+          </h2>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0; max-width: 960px;">
+            Side-by-side post-tax quarterly bonus estimation comparing single-venture participation (<strong>NeoGen</strong>, <strong>BloomPress</strong>, or <strong>FitMind AI</strong>) against <strong>Full Portfolio Participation ($35,000)</strong>, grounded in verified unit economics across 1-Quarter, 4-Quarter, 6-Quarter, and 8-Quarter horizons.
+          </p>
+        </div>
+        <button class="btn-secondary" onclick="exportBonusAllocationCSV()" style="font-size:0.82rem; padding:0.5rem 0.95rem;">
+          Export Bonus Schedule CSV
+        </button>
+      </div>
+
+      <!-- Statutory 30% Tax Reserve Policy Callout -->
+      <div class="bonus-policy-banner">
+        <p>
+          <strong>LLC Solvency &amp; 30% Statutory Tax Reserve Rule:</strong> Distributing external quarterly bonuses from pre-tax gross revenue erodes LLC operating liquidity and exposes entities to unreserved tax liabilities. Accordingly, all quarterly net profits shown below are reduced by a mandatory <strong>30% LLC Statutory Tax Holdback</strong> first (<code>Pre-Tax Net Profit × 70% = Post-Tax Distributable Net Profit</code>). Quarterly bonuses are calculated strictly from Post-Tax Distributable Net Profit.
+        </p>
+        <span class="bonus-tax-pill">30% LLC TAX HOLDBACK LOCKED</span>
+      </div>
+
+      <!-- Interactive CPA Controls Bar -->
+      <div class="bonus-controls-bar">
+        <div class="bonus-control-group">
+          <label>Projection Basis (Validated Financial Model)</label>
+          <div class="bonus-btn-row">
+            <button type="button" class="btn-primary" id="btn-bonus-base" onclick="setBonusBasis('base')">Institutional Base Case (CPA Conservative)</button>
+            <button type="button" class="btn-secondary" id="btn-bonus-growth" onclick="setBonusBasis('growth')">Target Growth Ramp (Q2/Q3 Consolidated)</button>
+          </div>
+        </div>
+
+        <div class="bonus-control-group">
+          <label>Partner Quarterly Bonus Allocation (% of Post-Tax Net Profit): <strong id="bonus-pct-label" style="color:#059669;">15%</strong></label>
+          <div class="bonus-btn-row" style="margin-bottom:0.5rem;">
+            <button type="button" class="btn-secondary" id="btn-pct-10" onclick="setBonusPct(10)" style="padding:0.3rem 0.65rem; font-size:0.8rem;">10%</button>
+            <button type="button" class="btn-primary" id="btn-pct-15" onclick="setBonusPct(15)" style="padding:0.3rem 0.65rem; font-size:0.8rem;">15% (Standard)</button>
+            <button type="button" class="btn-secondary" id="btn-pct-20" onclick="setBonusPct(20)" style="padding:0.3rem 0.65rem; font-size:0.8rem;">20%</button>
+            <button type="button" class="btn-secondary" id="btn-pct-25" onclick="setBonusPct(25)" style="padding:0.3rem 0.65rem; font-size:0.8rem;">25%</button>
+          </div>
+          <input type="range" id="bonus-pct-slider" min="5" max="25" value="15" step="1" style="width:100%;" oninput="setBonusPct(this.value)">
+        </div>
+      </div>
+
+      <!-- 4 Participation Option Cards: Each Venture vs. All Three -->
+      <div class="bonus-scenario-grid">
+
+        <!-- OPTION 1: NEOGEN ONLY -->
+        <div class="bonus-scenario-card" style="border-top: 4px solid #2563EB;">
+          <div class="bonus-card-head">
+            <div class="tranche-badge badge-neogen" style="margin-bottom:0;">Option 1 • Single Venture</div>
+            <span class="bonus-seed-chip">$12,500 Seed</span>
+          </div>
+          <h3 style="font-size:1.2rem; font-weight:800; margin:0.25rem 0 0.15rem 0;">NeoGen Technologies Only</h3>
+          <div style="font-size:0.78rem; color:var(--text-muted);">B2B AI Automation Agency &amp; Retainers</div>
+
+          <div class="bonus-waterfall-mini">
+            <div class="bw-row"><span>Quarterly Gross Revenue</span><strong class="mono" id="card-neogen-rev">$154,800</strong></div>
+            <div class="bw-row"><span>Less Ad Spend &amp; Delivery Costs</span><span class="mono" id="card-neogen-cost">($45,500)</span></div>
+            <div class="bw-row"><span>Pre-Tax Quarterly Net Profit</span><strong class="mono" id="card-neogen-pretax">$109,300</strong></div>
+            <div class="bw-row bw-tax"><span>Less 30% LLC Tax Reserve</span><span class="mono" id="card-neogen-tax">($32,790)</span></div>
+            <div class="bw-row bw-post"><span>Post-Tax Distributable Profit (70%)</span><strong class="mono" id="card-neogen-posttax">$76,510</strong></div>
+            <div class="bw-row bw-bonus"><span>Est. Quarterly Bonus (<span class="bonus-pct-inline">15%</span>)</span><strong class="mono" id="card-neogen-qtr">$11,477</strong></div>
+          </div>
+
+          <div class="bonus-horizon-grid">
+            <div class="bonus-horizon-pill"><span>4-Qtr (Year 1)</span><strong id="card-neogen-4q">$45,906</strong></div>
+            <div class="bonus-horizon-pill"><span>6-Qtr Cumulative</span><strong id="card-neogen-6q">$68,859</strong></div>
+            <div class="bonus-horizon-pill"><span>8-Qtr Cumulative</span><strong id="card-neogen-8q">$91,812</strong></div>
+            <div class="bonus-horizon-pill"><span>LLC Retained / Qtr</span><strong id="card-neogen-llc">$65,034</strong></div>
+          </div>
+
+          <div class="bonus-driver-note">
+            <strong>Validated Drivers:</strong> 18 new B2B clients/qtr + 32 active retainers @ $950/mo; $850 CAC, $4,800 avg setup, 9-mo avg lifespan. Pre-tax margin 70.6% → Post-tax margin 49.4%.
+          </div>
+        </div>
+
+        <!-- OPTION 2: BLOOMPRESS ONLY -->
+        <div class="bonus-scenario-card" style="border-top: 4px solid #CCA062;">
+          <div class="bonus-card-head">
+            <div class="tranche-badge badge-bloom" style="margin-bottom:0;">Option 2 • Single Venture</div>
+            <span class="bonus-seed-chip">$12,500 Seed</span>
+          </div>
+          <h3 style="font-size:1.2rem; font-weight:800; margin:0.25rem 0 0.15rem 0;">BloomPress Publishers Only</h3>
+          <div style="font-size:0.78rem; color:var(--text-muted);">Bespoke Literary Publishing Atelier</div>
+
+          <div class="bonus-waterfall-mini" style="background:#FAF7F2; border-color:#E9E3D8;">
+            <div class="bw-row"><span>Quarterly Gross Revenue</span><strong class="mono" id="card-bloom-rev">$179,360</strong></div>
+            <div class="bw-row"><span>Less COGS, Ads &amp; OpEx</span><span class="mono" id="card-bloom-cost">($85,365)</span></div>
+            <div class="bw-row"><span>Pre-Tax Quarterly Net Profit</span><strong class="mono" id="card-bloom-pretax">$93,995</strong></div>
+            <div class="bw-row bw-tax"><span>Less 30% LLC Tax Reserve</span><span class="mono" id="card-bloom-tax">($28,199)</span></div>
+            <div class="bw-row bw-post"><span>Post-Tax Distributable Profit (70%)</span><strong class="mono" id="card-bloom-posttax">$65,797</strong></div>
+            <div class="bw-row bw-bonus"><span>Est. Quarterly Bonus (<span class="bonus-pct-inline">15%</span>)</span><strong class="mono" id="card-bloom-qtr">$9,869</strong></div>
+          </div>
+
+          <div class="bonus-horizon-grid">
+            <div class="bonus-horizon-pill"><span>4-Qtr (Year 1)</span><strong id="card-bloom-4q">$39,478</strong></div>
+            <div class="bonus-horizon-pill"><span>6-Qtr Cumulative</span><strong id="card-bloom-6q">$59,217</strong></div>
+            <div class="bonus-horizon-pill"><span>8-Qtr Cumulative</span><strong id="card-bloom-8q">$78,956</strong></div>
+            <div class="bonus-horizon-pill"><span>LLC Retained / Qtr</span><strong id="card-bloom-llc">$55,927</strong></div>
+          </div>
+
+          <div class="bonus-driver-note">
+            <strong>Validated Drivers:</strong> 38 signed publishing titles/qtr @ $4,720 blended AOV; $425 CAC, 31.5% direct editorial/production COGS. Pre-tax margin 52.4% → Post-tax margin 36.7%.
+          </div>
+        </div>
+
+        <!-- OPTION 3: FITMIND AI ONLY -->
+        <div class="bonus-scenario-card" style="border-top: 4px solid #0284C7;">
+          <div class="bonus-card-head">
+            <div class="tranche-badge badge-fmai" style="margin-bottom:0;">Option 3 • Single Venture</div>
+            <span class="bonus-seed-chip">$10,000 Seed</span>
+          </div>
+          <h3 style="font-size:1.2rem; font-weight:800; margin:0.25rem 0 0.15rem 0;">FitMind AI Only</h3>
+          <div style="font-size:0.78rem; color:var(--text-muted);" id="card-fmai-subtitle">Consumer SaaS &amp; B2B Gym Ecosystem (M6 Base Case)</div>
+
+          <div class="bonus-waterfall-mini" style="background:#F0F9FF; border-color:#BAE6FD;">
+            <div class="bw-row"><span>Quarterly Gross Revenue</span><strong class="mono" id="card-fmai-rev">$105,000</strong></div>
+            <div class="bw-row"><span>Less Cloud, Ads &amp; Processing</span><span class="mono" id="card-fmai-cost">($63,600)</span></div>
+            <div class="bw-row"><span>Pre-Tax Quarterly Net Profit</span><strong class="mono" id="card-fmai-pretax">$41,400</strong></div>
+            <div class="bw-row bw-tax"><span>Less 30% LLC Tax Reserve</span><span class="mono" id="card-fmai-tax">($12,420)</span></div>
+            <div class="bw-row bw-post"><span>Post-Tax Distributable Profit (70%)</span><strong class="mono" id="card-fmai-posttax">$28,980</strong></div>
+            <div class="bw-row bw-bonus"><span>Est. Quarterly Bonus (<span class="bonus-pct-inline">15%</span>)</span><strong class="mono" id="card-fmai-qtr">$4,347</strong></div>
+          </div>
+
+          <div class="bonus-horizon-grid">
+            <div class="bonus-horizon-pill"><span>4-Qtr (Year 1)</span><strong id="card-fmai-4q">$17,388</strong></div>
+            <div class="bonus-horizon-pill"><span>6-Qtr Cumulative</span><strong id="card-fmai-6q">$26,082</strong></div>
+            <div class="bonus-horizon-pill"><span>8-Qtr Cumulative</span><strong id="card-fmai-8q">$34,776</strong></div>
+            <div class="bonus-horizon-pill"><span>LLC Retained / Qtr</span><strong id="card-fmai-llc">$24,633</strong></div>
+          </div>
+
+          <div class="bonus-driver-note">
+            <strong>CPA Standalone Note:</strong> $10,000 funds store-ready iOS/Android build completion only. Q1 is build &amp; pilot ($2.5K base net profit); stabilized bonus assumes M6+ scale and requires separate paid ad capital unless paired with NeoGen &amp; BloomPress.
+          </div>
+        </div>
+
+        <!-- OPTION 4: FULL PORTFOLIO (ALL THREE) -->
+        <div class="bonus-scenario-card featured-all">
+          <div class="bonus-card-head">
+            <div class="tranche-badge" style="margin-bottom:0; background:#DBEAFE; color:#1E40AF; border:1px solid #93C5FD;">Option 4 • Recommended Full Portfolio</div>
+            <span class="bonus-seed-chip" style="background:#0052FF; color:#FFFFFF; border-color:#0052FF;">$35,000 Seed</span>
+          </div>
+          <h3 style="font-size:1.2rem; font-weight:800; margin:0.25rem 0 0.15rem 0; color:#0A2540;">Going With All 3 Ventures</h3>
+          <div style="font-size:0.78rem; color:#1E40AF; font-weight:600;" id="card-all-subtitle">Institutional Base — Conservative CPA View</div>
+
+          <div class="bonus-waterfall-mini" style="background:#EFF6FF; border-color:#BFDBFE;">
+            <div class="bw-row"><span>Combined Qtr Gross Revenue</span><strong class="mono" id="card-all-rev">$439,160</strong></div>
+            <div class="bw-row"><span>Less Combined Costs &amp; Ad Spend</span><span class="mono" id="card-all-cost">($194,465)</span></div>
+            <div class="bw-row"><span>Pre-Tax Combined Net Profit</span><strong class="mono" id="card-all-pretax">$244,695</strong></div>
+            <div class="bw-row bw-tax"><span>Less 30% LLC Tax Reserve</span><span class="mono" id="card-all-tax">($73,409)</span></div>
+            <div class="bw-row bw-post"><span>Post-Tax Distributable Profit (70%)</span><strong class="mono" id="card-all-posttax">$171,287</strong></div>
+            <div class="bw-row bw-bonus"><span>Est. Quarterly Bonus (<span class="bonus-pct-inline">15%</span>)</span><strong class="mono" id="card-all-qtr">$25,693</strong></div>
+          </div>
+
+          <div class="bonus-horizon-grid">
+            <div class="bonus-horizon-pill" style="background:#ECFDF5; border-color:#A7F3D0;"><span>4-Qtr (Year 1)</span><strong style="color:#065F46;" id="card-all-4q">$102,772</strong></div>
+            <div class="bonus-horizon-pill" style="background:#ECFDF5; border-color:#A7F3D0;"><span>6-Qtr Cumulative</span><strong style="color:#065F46;" id="card-all-6q">$154,158</strong></div>
+            <div class="bonus-horizon-pill" style="background:#ECFDF5; border-color:#A7F3D0;"><span>8-Qtr Cumulative</span><strong style="color:#065F46;" id="card-all-8q">$205,544</strong></div>
+            <div class="bonus-horizon-pill" style="background:#EFF6FF; border-color:#BFDBFE;"><span>LLC Retained / Qtr</span><strong style="color:#1E40AF;" id="card-all-llc">$145,594</strong></div>
+          </div>
+
+          <div class="bonus-driver-note" style="color:var(--text-main);">
+            <strong>Self-Funding Flywheel Advantage:</strong> NeoGen &amp; BloomPress generate $142,400 Cycle 1 cash ($86,728 net surplus) to self-fund FitMind AI user acquisition without further outside capital, diversifying payouts across B2B retainers, publishing, and recurring SaaS.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CPA-Auditable Side-by-Side Comparison Matrix -->
+      <div style="overflow-x:auto; border:1px solid var(--border-color); border-radius:var(--radius-md);">
+        <table class="audit-table" style="min-width:960px;">
+          <thead>
+            <tr>
+              <th>Participation Option</th>
+              <th>Seed Capital</th>
+              <th>Qtr Gross Revenue</th>
+              <th>Pre-Tax Qtr Profit</th>
+              <th>Less 30% Tax Reserve</th>
+              <th>Post-Tax Profit (70%)</th>
+              <th>Est. Qtr Bonus (<span class="bonus-pct-inline">15%</span>)</th>
+              <th>4-Qtr (Year 1)</th>
+              <th>6-Qtr Cumulative</th>
+              <th>8-Qtr Cumulative</th>
+              <th>LLC Net Retained / Qtr</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. NeoGen Technologies Only</strong></td>
+              <td class="mono">$12,500</td>
+              <td class="mono" id="tbl-neogen-rev">$154,800</td>
+              <td class="mono" id="tbl-neogen-pretax">$109,300</td>
+              <td class="mono" style="color:#B91C1C;" id="tbl-neogen-tax">($32,790)</td>
+              <td class="mono font-bold" id="tbl-neogen-posttax">$76,510</td>
+              <td class="mono font-bold" style="color:#059669;" id="tbl-neogen-qtr">$11,477</td>
+              <td class="mono" id="tbl-neogen-4q">$45,906</td>
+              <td class="mono" id="tbl-neogen-6q">$68,859</td>
+              <td class="mono" id="tbl-neogen-8q">$91,812</td>
+              <td class="mono" id="tbl-neogen-llc">$65,034</td>
+            </tr>
+            <tr>
+              <td><strong>2. BloomPress Publishers Only</strong></td>
+              <td class="mono">$12,500</td>
+              <td class="mono" id="tbl-bloom-rev">$179,360</td>
+              <td class="mono" id="tbl-bloom-pretax">$93,995</td>
+              <td class="mono" style="color:#B91C1C;" id="tbl-bloom-tax">($28,199)</td>
+              <td class="mono font-bold" id="tbl-bloom-posttax">$65,797</td>
+              <td class="mono font-bold" style="color:#059669;" id="tbl-bloom-qtr">$9,869</td>
+              <td class="mono" id="tbl-bloom-4q">$39,478</td>
+              <td class="mono" id="tbl-bloom-6q">$59,217</td>
+              <td class="mono" id="tbl-bloom-8q">$78,956</td>
+              <td class="mono" id="tbl-bloom-llc">$55,927</td>
+            </tr>
+            <tr>
+              <td><strong>3. FitMind AI Only</strong></td>
+              <td class="mono">$10,000</td>
+              <td class="mono" id="tbl-fmai-rev">$105,000</td>
+              <td class="mono" id="tbl-fmai-pretax">$41,400</td>
+              <td class="mono" style="color:#B91C1C;" id="tbl-fmai-tax">($12,420)</td>
+              <td class="mono font-bold" id="tbl-fmai-posttax">$28,980</td>
+              <td class="mono font-bold" style="color:#059669;" id="tbl-fmai-qtr">$4,347</td>
+              <td class="mono" id="tbl-fmai-4q">$17,388</td>
+              <td class="mono" id="tbl-fmai-6q">$26,082</td>
+              <td class="mono" id="tbl-fmai-8q">$34,776</td>
+              <td class="mono" id="tbl-fmai-llc">$24,633</td>
+            </tr>
+            <tr class="table-total-row" style="background:#EFF6FF;">
+              <td><strong style="color:#0052FF;">4. All 3 Ventures (Full Portfolio)</strong></td>
+              <td class="mono font-bold" style="color:#0052FF;">$35,000</td>
+              <td class="mono font-bold" id="tbl-all-rev">$439,160</td>
+              <td class="mono font-bold" id="tbl-all-pretax">$244,695</td>
+              <td class="mono font-bold" style="color:#B91C1C;" id="tbl-all-tax">($73,409)</td>
+              <td class="mono font-bold" id="tbl-all-posttax">$171,287</td>
+              <td class="mono font-bold" style="color:#059669; font-size:1rem;" id="tbl-all-qtr">$25,693</td>
+              <td class="mono font-bold" id="tbl-all-4q">$102,772</td>
+              <td class="mono font-bold" style="color:#059669;" id="tbl-all-6q">$154,158</td>
+              <td class="mono font-bold" style="color:#059669;" id="tbl-all-8q">$205,544</td>
+              <td class="mono font-bold" style="color:#1E40AF;" id="tbl-all-llc">$145,594</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- CPA Audit Footnotes -->
+      <div style="font-size:0.79rem; color:var(--text-muted); margin-top:1rem; line-height:1.55; background:var(--bg-subtle); padding:1rem 1.25rem; border-radius:8px; border:1px solid var(--border-color);">
+        <strong>CPA Audit &amp; Governance Footnotes:</strong>
+        <ul style="margin:0.4rem 0 0 1.2rem; padding:0; display:flex; flex-direction:column; gap:0.25rem;">
+          <li><strong>Post-Tax Basis (30% Reduction):</strong> Every quarterly net profit figure deducts a 30% statutory LLC tax reserve prior to computing partner bonus pools, preserving full operating liquidity and preventing unhedged pass-through tax erosion.</li>
+          <li><strong>ASC 606 Cash-Realized Payouts:</strong> Quarterly bonuses are disbursed strictly against collected, settled cash profit after direct COGS, paid acquisition, and cloud/contractor operating expenses.</li>
+          <li><strong>Ramp vs. Stabilized Quarterly Run-Rate:</strong> NeoGen and BloomPress figures reflect validated stabilized quarterly models (<code>$154.8K</code> and <code>$179.36K</code> revenue). FitMind AI standalone $10K funds initial mobile build completion during Q1; stabilized quarterly figures reflect Month 6 Base Case (25K MAU) or Target Growth Ramp (50K MAU).</li>
+          <li><strong>LLC Bottom-Line Protection:</strong> Under the Full Portfolio Institutional Base Case at a 15% post-tax bonus share, the LLC retains <strong>$73,409/qtr</strong> in dedicated tax reserves plus <strong>$145,594/qtr</strong> in post-tax retained operating capital.</li>
+        </ul>
+      </div>
+    </section>
+
     <!-- Interactive Sensitivity & Governance Simulator -->
     <div class="interactive-sim-box">
       <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem;">
@@ -1218,6 +1653,211 @@
       link.click();
       document.body.removeChild(link);
     }
+
+    // Post-Tax Quarterly Bonus Allocation Engine (30% LLC Tax Reserve Applied)
+    const BONUS_MODEL_DATA = {
+      taxReserveRate: 0.30,
+      postTaxRate: 0.70,
+      neogen: {
+        label: "1. NeoGen Technologies Only",
+        seed: 12500,
+        rev: 154800,
+        cost: 45500,
+        preTax: 109300
+      },
+      bloom: {
+        label: "2. BloomPress Publishers Only",
+        seed: 12500,
+        rev: 179360,
+        cost: 85365,
+        preTax: 93995
+      },
+      fmai: {
+        label: "3. FitMind AI Only",
+        seed: 10000,
+        base: {
+          subtitle: "Consumer SaaS & B2B Gym Ecosystem (M6 Base Case)",
+          rev: 105000,
+          cost: 63600,
+          preTax: 41400
+        },
+        growth: {
+          subtitle: "Consumer SaaS & B2B Gym Ecosystem (M6 Growth Ramp)",
+          rev: 590400,
+          cost: 217200,
+          preTax: 373200
+        }
+      },
+      all: {
+        label: "4. All 3 Ventures (Full Portfolio)",
+        seed: 35000,
+        base: {
+          subtitle: "Institutional Base — Conservative CPA View",
+          rev: 439160,
+          cost: 194465,
+          preTax: 244695
+        },
+        growth: {
+          subtitle: "Consolidated Q2/Q3 Portfolio Model",
+          rev: 924560,
+          cost: 315600,
+          preTax: 608960
+        }
+      }
+    };
+
+    let activeBonusBasis = 'base';
+    let activeBonusPct = 15;
+
+    function fmtCurrency(val) {
+      return '$' + Math.round(val).toLocaleString();
+    }
+
+    function fmtParenCurrency(val) {
+      return '($' + Math.round(val).toLocaleString() + ')';
+    }
+
+    function setBonusBasis(basis) {
+      activeBonusBasis = basis === 'growth' ? 'growth' : 'base';
+      document.getElementById('btn-bonus-base').className = activeBonusBasis === 'base' ? 'btn-primary' : 'btn-secondary';
+      document.getElementById('btn-bonus-growth').className = activeBonusBasis === 'growth' ? 'btn-primary' : 'btn-secondary';
+      renderBonusAllocation();
+    }
+
+    function setBonusPct(pct) {
+      const parsed = Math.max(5, Math.min(25, parseInt(pct, 10) || 15));
+      activeBonusPct = parsed;
+      const slider = document.getElementById('bonus-pct-slider');
+      if (slider) slider.value = parsed;
+
+      [10, 15, 20, 25].forEach(preset => {
+        const btn = document.getElementById(`btn-pct-${preset}`);
+        if (btn) btn.className = preset === parsed ? 'btn-primary' : 'btn-secondary';
+      });
+      renderBonusAllocation();
+    }
+
+    function computeVentureBonusRow(rev, cost, preTax, bonusShare) {
+      const taxReserve = preTax * BONUS_MODEL_DATA.taxReserveRate;
+      const postTax = preTax * BONUS_MODEL_DATA.postTaxRate;
+      const qtrBonus = postTax * bonusShare;
+      const llcRetained = postTax - qtrBonus;
+      return {
+        rev,
+        cost,
+        preTax,
+        taxReserve,
+        postTax,
+        qtrBonus,
+        q4: qtrBonus * 4,
+        q6: qtrBonus * 6,
+        q8: qtrBonus * 8,
+        llcRetained
+      };
+    }
+
+    function applyRowToDOM(key, metrics) {
+      const setTxt = (id, text) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = text;
+      };
+      // Card fields
+      setTxt(`card-${key}-rev`, fmtCurrency(metrics.rev));
+      setTxt(`card-${key}-cost`, fmtParenCurrency(metrics.cost));
+      setTxt(`card-${key}-pretax`, fmtCurrency(metrics.preTax));
+      setTxt(`card-${key}-tax`, fmtParenCurrency(metrics.taxReserve));
+      setTxt(`card-${key}-posttax`, fmtCurrency(metrics.postTax));
+      setTxt(`card-${key}-qtr`, fmtCurrency(metrics.qtrBonus));
+      setTxt(`card-${key}-4q`, fmtCurrency(metrics.q4));
+      setTxt(`card-${key}-6q`, fmtCurrency(metrics.q6));
+      setTxt(`card-${key}-8q`, fmtCurrency(metrics.q8));
+      setTxt(`card-${key}-llc`, fmtCurrency(metrics.llcRetained));
+
+      // Table fields
+      setTxt(`tbl-${key}-rev`, fmtCurrency(metrics.rev));
+      setTxt(`tbl-${key}-pretax`, fmtCurrency(metrics.preTax));
+      setTxt(`tbl-${key}-tax`, fmtParenCurrency(metrics.taxReserve));
+      setTxt(`tbl-${key}-posttax`, fmtCurrency(metrics.postTax));
+      setTxt(`tbl-${key}-qtr`, fmtCurrency(metrics.qtrBonus));
+      setTxt(`tbl-${key}-4q`, fmtCurrency(metrics.q4));
+      setTxt(`tbl-${key}-6q`, fmtCurrency(metrics.q6));
+      setTxt(`tbl-${key}-8q`, fmtCurrency(metrics.q8));
+      setTxt(`tbl-${key}-llc`, fmtCurrency(metrics.llcRetained));
+    }
+
+    function renderBonusAllocation() {
+      const bonusShare = activeBonusPct / 100;
+      const pctLabel = document.getElementById('bonus-pct-label');
+      if (pctLabel) pctLabel.textContent = `${activeBonusPct}%`;
+      document.querySelectorAll('.bonus-pct-inline').forEach(el => {
+        el.textContent = `${activeBonusPct}%`;
+      });
+
+      const fmaiMode = BONUS_MODEL_DATA.fmai[activeBonusBasis];
+      const allMode = BONUS_MODEL_DATA.all[activeBonusBasis];
+
+      const fmaiSub = document.getElementById('card-fmai-subtitle');
+      if (fmaiSub) fmaiSub.textContent = fmaiMode.subtitle;
+      const allSub = document.getElementById('card-all-subtitle');
+      if (allSub) allSub.textContent = allMode.subtitle;
+
+      applyRowToDOM('neogen', computeVentureBonusRow(BONUS_MODEL_DATA.neogen.rev, BONUS_MODEL_DATA.neogen.cost, BONUS_MODEL_DATA.neogen.preTax, bonusShare));
+      applyRowToDOM('bloom', computeVentureBonusRow(BONUS_MODEL_DATA.bloom.rev, BONUS_MODEL_DATA.bloom.cost, BONUS_MODEL_DATA.bloom.preTax, bonusShare));
+      applyRowToDOM('fmai', computeVentureBonusRow(fmaiMode.rev, fmaiMode.cost, fmaiMode.preTax, bonusShare));
+      applyRowToDOM('all', computeVentureBonusRow(allMode.rev, allMode.cost, allMode.preTax, bonusShare));
+    }
+
+    function exportBonusAllocationCSV() {
+      const bonusShare = activeBonusPct / 100;
+      const fmaiMode = BONUS_MODEL_DATA.fmai[activeBonusBasis];
+      const allMode = BONUS_MODEL_DATA.all[activeBonusBasis];
+
+      const rowsData = [
+        { label: BONUS_MODEL_DATA.neogen.label, seed: BONUS_MODEL_DATA.neogen.seed, m: computeVentureBonusRow(BONUS_MODEL_DATA.neogen.rev, BONUS_MODEL_DATA.neogen.cost, BONUS_MODEL_DATA.neogen.preTax, bonusShare) },
+        { label: BONUS_MODEL_DATA.bloom.label, seed: BONUS_MODEL_DATA.bloom.seed, m: computeVentureBonusRow(BONUS_MODEL_DATA.bloom.rev, BONUS_MODEL_DATA.bloom.cost, BONUS_MODEL_DATA.bloom.preTax, bonusShare) },
+        { label: BONUS_MODEL_DATA.fmai.label, seed: BONUS_MODEL_DATA.fmai.seed, m: computeVentureBonusRow(fmaiMode.rev, fmaiMode.cost, fmaiMode.preTax, bonusShare) },
+        { label: BONUS_MODEL_DATA.all.label, seed: BONUS_MODEL_DATA.all.seed, m: computeVentureBonusRow(allMode.rev, allMode.cost, allMode.preTax, bonusShare) }
+      ];
+
+      const csvRows = [
+        ["PARTICIPATION OPTION", "MODEL BASIS", "SEED CAPITAL", "QTR GROSS REVENUE", "QTR COSTS", "PRE-TAX QTR PROFIT", "30% LLC TAX RESERVE", "POST-TAX DISTRIBUTABLE (70%)", `EST QTR BONUS (${activeBonusPct}%)`, "4-QTR (YEAR 1)", "6-QTR CUMULATIVE", "8-QTR CUMULATIVE", "LLC NET RETAINED / QTR"]
+      ];
+      const basisLabel = activeBonusBasis === 'growth' ? "Target Growth Ramp" : "Institutional Base Case";
+      rowsData.forEach(r => {
+        csvRows.push([
+          r.label,
+          basisLabel,
+          fmtCurrency(r.seed),
+          fmtCurrency(r.m.rev),
+          fmtCurrency(r.m.cost),
+          fmtCurrency(r.m.preTax),
+          fmtCurrency(r.m.taxReserve),
+          fmtCurrency(r.m.postTax),
+          fmtCurrency(r.m.qtrBonus),
+          fmtCurrency(r.m.q4),
+          fmtCurrency(r.m.q6),
+          fmtCurrency(r.m.q8),
+          fmtCurrency(r.m.llcRetained)
+        ]);
+      });
+
+      let csvContent = "";
+      csvRows.forEach(row => {
+        csvContent += row.map(v => `"${String(v).replace(/"/g, '""')}"`).join(",") + "\n";
+      });
+
+      const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", `Venture_Advisory_PostTax_Quarterly_Bonus_${activeBonusBasis}_${activeBonusPct}pct.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Initialize Post-Tax Bonus Allocation display on load
+    renderBonusAllocation();
   </script>
 </body>
 </html>
